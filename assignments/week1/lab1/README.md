@@ -31,7 +31,8 @@ Ok, one module loaded.
 	* now if you type ```greeting``` into the terminal you should see your greeting
 	* Haskell is a functional language so define the identity function by changing ```undefined``` to  ```x```
   * type ```:q``` to quit the REPL in the 
-  * run the tests by running
+  * run the tests by running ```cabal test```
+  * make a commit by typing ```git commit -a -m "my first commit"``` into the console
   * submit your work by typing ```git push```
 
   
