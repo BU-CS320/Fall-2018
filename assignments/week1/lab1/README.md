@@ -7,7 +7,7 @@
   * Type ```:q``` to quit
 * If you have not already, sign up for a free GitHub account following these [instructions](https://help.github.com/articles/signing-up-for-a-new-github-account/)
 * If you have not already, set up git on your computer following these [instructions](https://help.github.com/articles/set-up-git/)
-* Follow this link https://classroom.github.com/a/1ShFqja_ to create an assignment repository
+* Follow this [link](https://classroom.github.com/a/1ShFqja_) to create an assignment repository
   * Clone your personal assignment repo by following the instructions [here](https://help.github.com/articles/cloning-a-repository/)
   * cd into the newly created directory by typing ```cd Fall-2018```
   * You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
