@@ -24,12 +24,12 @@ GHCi, version 8.2.2: http://www.haskell.org/ghc/  :? for help
 [1 of 1] Compiling Greeting         ( src\Greeting.hs, interpreted )
 Ok, one module loaded.
 ```
-    * let's try to run a greeting by typing ```greeting``` you should see an error
-	* fix the error by opening lab1/src in your favorite text editor on the line that says ```greeting = undefined``` change ```undefined``` to your favourite greeting in quotes.
-	* save the file
-	* reset the terminal by typing ```:reload```
-	* now if you type ```greeting``` into the terminal you should see your greeting
-	* Haskell is a functional language so define the identity function by changing ```undefined``` to  ```x```
+* let's try to run a greeting by typing ```greeting``` you should see an error
+  * fix the error by opening lab1/src in your favorite text editor on the line that says ```greeting = undefined``` change ```undefined``` to your favourite greeting in quotes.
+  * save the file
+  * reset the terminal by typing ```:reload```
+  * now if you type ```greeting``` into the terminal you should see your greeting
+  * Haskell is a functional language so define the identity function by changing ```undefined``` to  ```x```
   * type ```:q``` to quit the REPL in the 
   * run the tests by running ```cabal test```
   * make a commit by typing ```git commit -a -m "my first commit"``` into the console
