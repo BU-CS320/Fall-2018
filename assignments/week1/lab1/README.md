@@ -29,7 +29,7 @@ Ok, one module loaded.
   * save the file
   * reset the terminal by typing ```:reload```
   * now if you type ```greeting``` into the terminal you should see your greeting
-  * Haskell is a functional language so define the identity function by changing ```undefined``` to  ```x```
+  * Haskell is a functional language so define the identity function by changing ```ident x = undefined``` to  ```ident x = x```
   * type ```:q``` to quit the REPL in the 
   * run the tests by running ```cabal test```
   * make a commit by typing ```git commit -a -m "my first commit"``` into the console
