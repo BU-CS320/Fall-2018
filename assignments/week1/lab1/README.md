@@ -9,8 +9,9 @@
 
 ## First Haskell Program
 * Follow this [link](https://classroom.github.com/a/1ShFqja_) to create an assignment repository
+  * Press the "Accept this assignment" button
   * Clone your personal assignment repo by following the instructions [here](https://help.github.com/articles/cloning-a-repository/)
-  * cd into the newly created directory by typing ```cd Fall-2018```
+  * ```cd``` into the newly created directory by typing ```cd Fall-2018```
   * You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
    * type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
    * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
