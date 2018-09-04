@@ -13,9 +13,9 @@
   * Clone your personal assignment repo by following the instructions [here](https://help.github.com/articles/cloning-a-repository/)
   * ```cd``` into the newly created directory by typing ```cd Fall-2018```
   * You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
-   * type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
-   * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
-   * You always want to keep your assignment up to date by running ```git pull upstream master```, do that now
+    * type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
+    * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
+    * You always want to keep your assignment up to date by running ```git pull upstream master```, do that now
 * cd into this assignment (```cd assignments/week1/lab```), first we will write a greeting
   * run ```cabal repl``` in the terminal (it is important that you do this in the ```lab1``` directory).  You should see 
 ```
