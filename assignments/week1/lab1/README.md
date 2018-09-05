@@ -39,6 +39,7 @@ Ok, one module loaded.
   * run the tests by running ```cabal test```
   * make a commit by typing ```git commit -a -m "my first commit"``` into the console
   * submit your work by typing ```git push```
+  * check that you can see your solutions on the website for your private repo
 
 
 ## A Quick Survey
