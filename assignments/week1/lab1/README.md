@@ -1,5 +1,7 @@
 # Lab 1
 
+If you are a mac user and you are may need to follow the instructions under [mac-hints.md](mac-hints.md).
+
 ## Setup
 * Install the latest version(8.4.3) of [Haskell Platform](https://www.haskell.org/platform/)
   * Open your terminal and type ```ghci``` you should see ```GHCi, version 8.4.3: http://www.haskell.org/ghc/  :? for help```
@@ -7,7 +9,7 @@
 * If you have not already, sign up for a free GitHub account following these [instructions](https://help.github.com/articles/signing-up-for-a-new-github-account/)
 * If you have not already, set up git on your computer following these [instructions](https://help.github.com/articles/set-up-git/)
 * run ```cabal update```
-* run ```cabal install tasty``` and ```cabal install tasty-hunit``` to get the test libraries.
+* run ```cabal install tasty``` and ```cabal install tasty-hunit``` to get the test libraries
 
 ## First Haskell Program
 * Follow this [link](https://classroom.github.com/a/1ShFqja_) to create an assignment repository
