@@ -2,7 +2,7 @@
 
 ## Setup
 * Install the latest version(8.4.3) of [Haskell Platform](https://www.haskell.org/platform/)
-  * Open your terminal and type ```ghci``` you should see ```GHCi, version 8.2.2: http://www.haskell.org/ghc/  :? for help```
+  * Open your terminal and type ```ghci``` you should see ```GHCi, version 8.4.3: http://www.haskell.org/ghc/  :? for help```
   * Type ```:q``` to quit
 * If you have not already, sign up for a free GitHub account following these [instructions](https://help.github.com/articles/signing-up-for-a-new-github-account/)
 * If you have not already, set up git on your computer following these [instructions](https://help.github.com/articles/set-up-git/)
