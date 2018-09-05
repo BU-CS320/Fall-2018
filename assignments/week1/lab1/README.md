@@ -48,6 +48,9 @@ Complete the survey by adding your answers to [survey.md](survey.md).  You may d
 ### 9:05 Lab
  * there is a [bug](https://github.com/haskell/cabal/issues/4602) in cabal that we ran into.  The instructions now include a work around.
 
+## ```git``` issues
+If you are having ```git``` issues run ```git status``` and call on Mark for help.
+
 ## Bonus: Sharing Tests, and correcting my spelling
 We will allow you to share tests with the class. To do this 
  * Make a fork of the class repo: https://github.com/BU-CS320/Fall-2018
