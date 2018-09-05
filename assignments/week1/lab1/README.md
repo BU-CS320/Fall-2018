@@ -46,7 +46,7 @@ Complete the survey by adding your answers to [survey.md](survey.md).  You may d
 
 ## Notes
 ### 9:05 Lab
- * there is a [bug](https://github.com/haskell/cabal/issues/4602) in cabal that we ran into.  The instructions now include the fix.
+ * there is a [bug](https://github.com/haskell/cabal/issues/4602) in cabal that we ran into.  The instructions now include a work around.
 
 ## Bonus: Sharing Tests, and correcting my spelling
 We will allow you to share tests with the class. To do this 
