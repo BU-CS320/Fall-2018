@@ -36,7 +36,7 @@ Ok, one module loaded.
   * reset the terminal by typing ```:reload```
   * Haskell doesn't let us see the definition of functions, but we can test by running ```ident greeting``` and see if we get back the greeting we expect
   * type ```:q``` to quit the REPL in the 
-  * run the tests by running ```cabal test```
+  * run the tests by running ```cabal test```, some students need to run ```cabal configure --enable-tests``` first
   * make a commit by typing ```git commit -a -m "my first commit"``` into the console
   * submit your work by typing ```git push```
   * check that you can see your solutions on the website for your private repo
@@ -48,6 +48,8 @@ Complete the survey by adding your answers to [survey.md](survey.md).  You may d
 ## Notes
 ### 9:05 Lab
  * there is a [bug](https://github.com/haskell/cabal/issues/4602) in cabal that we ran into.  The instructions now include a work around.
+### 12:20 Lab
+ * Several MAC users got a strange parser error.  I think this is becuase their text editor inserted unicode quote ```“``` instead of the correct ASCII quote ```"```.
 
 ## ```git``` issues
 If you are having ```git``` issues run ```git status``` and call on Mark for help.
