@@ -14,7 +14,7 @@
   * Press the "Accept this assignment" button, this will create a private repository for your solutions
   * When the cloning finishes, you will see a link like "Your assignment has been created here: [link to your new private repo]", click that link.  You will know you are looking at your private repo becuase you will see ![Lock icon BU-CS320/weel1- your user name Private](img/private-repo.png) on the top of the web page.
   * Clone your personal assignment repo by following the instructions [here](https://help.github.com/articles/cloning-a-repository/)
-  * ```cd``` into the newly created directory by typing ```cd week1-"your user name"```
+  * ```cd``` into the newly created directory by typing ```cd week1-username``` with ```username``` replaced with your user name
   * You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
     * type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
     * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
