@@ -34,7 +34,7 @@ Ok, one module loaded.
   * now if you type ```greeting``` into the terminal you should see your greeting
   * Haskell is a functional language so define the identity function by changing ```ident x = undefined``` to  ```ident x = x```
   * reset the terminal by typing ```:reload```
-  * Haskell doesn't let us inspect functions, we can test by running ```ident greeting``` and see if we get back the greeting we expect
+  * Haskell doesn't let us see the definition of functions, but we can test by running ```ident greeting``` and see if we get back the greeting we expect
   * type ```:q``` to quit the REPL in the 
   * run the tests by running ```cabal test```
   * make a commit by typing ```git commit -a -m "my first commit"``` into the console
