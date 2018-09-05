@@ -7,7 +7,7 @@ Navigate to the directory (might be somewhat different depending on version of H
 
 Change permissions of "settings" file to Read&Write
 
-Edit parameter "C compiler supports -no-pie" to "NO"
+Edit parameter ```C compiler supports -no-pie``` to ```NO```, make sure that you don't accidently insert unicode quotes ```“``` instead of the correct ASCII quote ```"```.
 
 To fix "--enable-tests" issue:
 
