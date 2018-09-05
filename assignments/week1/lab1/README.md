@@ -45,7 +45,7 @@ Ok, one module loaded.
 
 
 ## A Quick Survey
-Complete the survey by adding your answers to [survey.md](survey.md).  You may do this through the text editor or through the GitHub interface.
+Complete the survey by adding your answers to [survey.md](survey.md).  You may do this through the with a editor and committing and pushing or through the GitHub interface.
 
 ## Notes
 ### 9:05 Lab
