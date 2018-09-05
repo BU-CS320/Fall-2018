@@ -6,18 +6,20 @@
   * Type ```:q``` to quit
 * If you have not already, sign up for a free GitHub account following these [instructions](https://help.github.com/articles/signing-up-for-a-new-github-account/)
 * If you have not already, set up git on your computer following these [instructions](https://help.github.com/articles/set-up-git/)
+* run ```cabal update```
 * run ```cabal install tasty``` and ```cabal install tasty-hunit``` to get the test libraries.
 
 ## First Haskell Program
 * Follow this [link](https://classroom.github.com/a/1ShFqja_) to create an assignment repository
-  * Press the "Accept this assignment" button
+  * Press the "Accept this assignment" button, this will create a private repository for your solutions
+  * When the cloning finishes, you will see a link like "Your assignment has been created here: [link to your new private repo]", click that link.  You will know you are looking at your private repo becuase you will see ![Lock icon BU-CS320/weel1- your user name Private](img/private-repo.png) on the top of the web page.
   * Clone your personal assignment repo by following the instructions [here](https://help.github.com/articles/cloning-a-repository/)
-  * ```cd``` into the newly created directory by typing ```cd Fall-2018```
+  * ```cd``` into the newly created directory by typing ```cd week1-```
   * You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
     * type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
     * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
     * You always want to keep your assignment up to date by running ```git pull upstream master```, do that now
-* cd into this assignment (```cd assignments/week1/lab```), first we will write a greeting
+* ```cd```  into this assignment (```cd assignments/week1/lab1```), first we will write a greeting
   * run ```cabal repl``` in the terminal (it is important that you do this in the ```lab1``` directory).  You should see 
 ```
 Preprocessing library for lab1-0.1.0.0..
