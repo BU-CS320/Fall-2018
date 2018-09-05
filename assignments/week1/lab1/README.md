@@ -19,10 +19,10 @@ If you are a mac user and you are may need to follow the instructions under [mac
   * ```cd``` into the newly created directory by typing ```cd week1-username``` with ```username``` replaced with your user name
   * You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
     * In your terminal type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
-    * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
+    * check that it worked by typing ```git remote -v```.  You should see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
     * You always want to keep your assignment up to date by running ```git pull upstream master```, do that now
 * ```cd```  into this assignment (```cd assignments/week1/lab1```), first we will write a greeting
-  * run ```cabal new-repl``` in the terminal (it is important that you do this in the ```lab1``` directory).  You should see 
+  * run ```cabal new-repl``` in the terminal (it is important that you do this in the ```lab1``` directory).  You should see
 ```
 Preprocessing library for lab1-0.1.0.0..
 GHCi, version 8.2.2: http://www.haskell.org/ghc/  :? for help
@@ -37,7 +37,7 @@ Ok, one module loaded.
   * Haskell is a functional language so define the identity function by changing ```ident x = undefined``` to  ```ident x = x```
   * reset the terminal by typing ```:reload```
   * Haskell doesn't let us see the definition of functions, but we can test by running ```ident greeting``` and see if we get back the greeting we expect
-  * type ```:q``` to quit the REPL in the 
+  * type ```:q``` to quit the REPL in the
   * run the tests by running ```cabal test```, some students need to run ```cabal configure --enable-tests``` first
   * make a commit by typing ```git commit -a -m "my first commit"``` into the console
   * submit your work by typing ```git push```
@@ -57,7 +57,7 @@ Complete the survey by adding your answers to [survey.md](survey.md).  You may d
 If you are having ```git``` issues run ```git status``` and call on Mark for help.
 
 ## Optional Bonus: Sharing Tests, and correcting my spelling
-We will allow you to share tests with the class. To do this 
+We will allow you to share tests with the class. To do this
  * Make a fork of the class repo: https://github.com/BU-CS320/Fall-2018
  * clone your fork locally (keep it separate from your assignment clone)
  * go to the test directory (in this case Fall-2018/assignments/week1/lab1/tests)
