@@ -22,7 +22,7 @@ If you are a mac user and you are may need to follow the instructions under [mac
     * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
     * You always want to keep your assignment up to date by running ```git pull upstream master```, do that now
 * ```cd```  into this assignment (```cd assignments/week1/lab1```), first we will write a greeting
-  * run ```cabal new-repl``` in the terminal (it is important that you do this in the ```lab1``` directory).  You should see 
+  * run ```cabal new-repl (or cabal repl if gets "Failed to load interface")``` in the terminal (it is important that you do this in the ```lab1``` directory).  You should see 
 ```
 Preprocessing library for lab1-0.1.0.0..
 GHCi, version 8.2.2: http://www.haskell.org/ghc/  :? for help
