@@ -22,13 +22,13 @@ Review the [video](https://www.youtube.com/watch?v=fXbWsMHKI5A) that was posted 
 1. run the tests by running ```cabal test``` (this step is less important for this lab since many of the answers are open ended)
 1. run ```git status``` to make sure everything is ok
 1. run ```git commit -a -m "whoo hoo I'm done"``` to make a commit on your laptop
-1. run ``git push``` to submit your work
+1. run ```git push``` to submit your work
 1. check that you can see your solutions on the website for your private repo
    
 ## REPL hints
-`:reload` will reload the file
-`:type` will tell you the type of an expression (we will cover on 9/13)
-`:quit` will leave the repl
+* `:reload` will reload the file
+* `:type` will tell you the type of an expression (we will cover on 9/13)
+* `:quit` will leave the repl
 
 ## ```git``` issues
 If you are having ```git``` issues, run ```git status``` and call on Mark for help.
