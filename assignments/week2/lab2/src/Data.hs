@@ -58,10 +58,10 @@ length _ = undefined
 
 exampleStudentYear = undefined
 
-expectedGraduateion _ = undefined
+expectedYearsToGraduate _ = undefined
 
 -- how can we write the inverse?
---fromExpectedGraduateion _ = undefined
+--fromExpectedYearsToGraduate _ = undefined
 
 
 
