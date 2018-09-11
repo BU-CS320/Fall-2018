@@ -11,12 +11,12 @@ Review the [video](https://www.youtube.com/watch?v=fXbWsMHKI5A) that was posted 
 1. Clone your personal assignment repo with the commandline ```git clone https://github.com/BU-CS320/week2-username.git``` with ```username``` replaced with your user name
 1. ```cd``` into the newly created directory by typing ```cd week2-username``` with ```username``` replaced with your user name
 1. You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
-  * In your terminal type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
-  * check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
-  * You always want to keep your assignment up to date by running ```git pull upstream master```, do that now
+   1. In your terminal type ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
+   1. check that it worked by typing ```git remote -v```.  You should see see the line ```upstream https://github.com/BU-CS320/Fall-2018.git (fetch)```
+   1. You always want to keep your assignment up to date by running ```git pull upstream master```, do that now
 1. ```cd```  into this assignment (```cd assignments/week2/lab2```), first we will write a greeting
-  * run ```cabal new-repl``` (or ```cabal repl``` if gets "Failed to load interface") in the terminal (it is important that you do this in the ```lab2``` directory).
-  * in your favorite text editor open ```src/Data.hs```
+   1. run ```cabal new-repl``` (or ```cabal repl``` if gets "Failed to load interface") in the terminal (it is important that you do this in the ```lab2``` directory).
+   1. in your favorite text editor open ```src/Data.hs```
   
 ## REPL hints
 
