@@ -1,4 +1,4 @@
-name:                 lab1
+name:                 lab2
 version:              0.1.0.0
 synopsis:
 homepage:
@@ -10,9 +10,9 @@ cabal-version:        >=1.10
 
 
 library
-  exposed-modules:    Greeting
+  exposed-modules:    Data
   ghc-options:        -fwarn-incomplete-patterns -fwarn-incomplete-uni-patterns
-  build-depends:      containers, base >= 4.7 && < 5
+  build-depends:      base >= 4.7 && < 5
   hs-source-dirs:     src
   default-language:   Haskell2010
 
@@ -24,8 +24,7 @@ test-suite test
   hs-source-dirs:
     tests
   main-is: Main.hs
-  -- TODO: kind of a pain
   build-depends:
       containers, base >= 4.7 && < 5
     , tasty >= 0.7, tasty-hunit
-    , lab1
+    , lab2

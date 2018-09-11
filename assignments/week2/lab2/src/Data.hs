@@ -1,4 +1,4 @@
-module DataExamples where
+module Data where
 import Prelude(Show, undefined)
 
 -- When thinking about data in Haskell always think
@@ -32,14 +32,14 @@ favoriteColor = undefined
 canGo _ = undefined
 
 
-data ListNat = Nil | Cons Nat ListNat deriving Show
+data ListNat = NilNat | ConsNat Nat ListNat deriving Show
 
 exampleListNat = undefined
 
 lengthOfListNat _  = undefined
 
 
-data ListBool = Nil | Cons Bool ListBool deriving Show
+data ListBool = NilBool | ConsBool Bool ListBool deriving Show
 
 exampleListBool = undefined
 
@@ -47,7 +47,7 @@ lengthOfListBool _  = undefined
 
 -- ... this get's very tiresome
 
-data List a = Nil | Cons a List deriving Show -- where a means anything
+data List a = Nil | Cons a (List a) deriving Show -- where a means anything
 
 exampleList = undefined
 
