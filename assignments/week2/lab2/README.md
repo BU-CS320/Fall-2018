@@ -6,8 +6,8 @@ Review the [video](https://www.youtube.com/watch?v=fXbWsMHKI5A) that was posted 
 
 ## Setup (similar to lab1) TODO link
 1. Follow this [link](TODO) to create an assignment repository
-   * Press the "Accept this assignment" button, this will create a private repository for your solutions
-   * When the cloning finishes, you will see a link like "Your assignment has been created here: [link to your new private repo]", click that link.  You will know you are looking at your private repo becuase you will see ![Lock icon BU-CS320/weel1- your user name Private](img/private-repo.png) on the top of the web page.
+   1. Press the "Accept this assignment" button, this will create a private repository for your solutions
+   1. When the cloning finishes, you will see a link like "Your assignment has been created here: [link to your new private repo]", click that link.  You will know you are looking at your private repo becuase you will see ![Lock icon BU-CS320/weel1- your user name Private](img/private-repo.png) on the top of the web page.
 1. Clone your personal assignment repo with the commandline ```git clone https://github.com/BU-CS320/week2-username.git``` with ```username``` replaced with your user name
 1. ```cd``` into the newly created directory by typing ```cd week2-username``` with ```username``` replaced with your user name
 1. You always want to take advantage of the latest corrections to the assignments and shared tests so we will add the main repository as a source
