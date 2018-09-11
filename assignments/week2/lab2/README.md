@@ -19,10 +19,12 @@ Review the [video](https://www.youtube.com/watch?v=fXbWsMHKI5A) that was posted 
    1. in your favorite text editor open ```src/Data.hs```
   
 ## REPL hints
-
+`:reload` will reload the file
+`:type` will tell you the type of an expression (we will cover on 9/13)
+`:quit` will leave the repl
 
 ## ```git``` issues
-If you are having ```git``` issues run ```git status``` and call on Mark for help.
+If you are having ```git``` issues, run ```git status``` and call on Mark for help.
 
 ## Optional Bonus: Sharing Tests, and correcting my spelling
 We will allow you to share tests with the class. To do this 
