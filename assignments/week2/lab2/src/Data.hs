@@ -58,10 +58,11 @@ length _ = undefined
 
 exampleStudentYear = undefined
 
+-- write an function that shows how many years a student is expected to graduate.  For instance a Sophomore is expected to graduate in 3 years.
 expectedYearsToGraduate _ = undefined
 
 -- how can we write the inverse?
---fromExpectedYearsToGraduate _ = undefined
+fromExpectedYearsToGraduate _ = undefined
 
 
 
