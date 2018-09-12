@@ -31,4 +31,4 @@ We will allow you to share tests with the class. To do this
  * add a test
  * push the test up to your fork
  * https://help.github.com/articles/creating-a-pull-request/
- * If your test looks good we will accept it
+ * If your test looks good we will accept it!
