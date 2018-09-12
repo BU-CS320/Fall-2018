@@ -21,7 +21,7 @@ Review the [video](https://www.youtube.com/watch?v=fXbWsMHKI5A) that was posted 
 ## Submit (similar to [lab1](../../week1/lab1))
 1. run the tests by running ```cabal test``` (this step is less important for this lab since many of the answers are open ended)
 1. run ```git status``` to make sure everything is ok
-1. run ```git commit -a -m "whoo hoo I'm done"``` to make a commit on your laptop
+1. run ```git commit -a -m "whoo hoo I'm done with lab 2"``` to make a commit on your laptop
 1. run ```git push``` to submit your work
 1. check that you can see your solutions on the website for your private repo
    
