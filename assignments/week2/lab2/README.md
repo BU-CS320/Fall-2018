@@ -33,6 +33,10 @@ Review the [video](https://www.youtube.com/watch?v=fXbWsMHKI5A) that was posted 
 ## ```git``` issues
 If you are having ```git``` issues, run ```git status``` and call on Mark for help.
 
+## Notes
+### 9:05 Lab
+ * I made a typo on the ```Craziests``` data type that will result in an error ```Train Craziests (List a)``` should have been ```Train (Craziests a) (List a)```.
+
 ## Optional Bonus: Sharing Tests, and correcting my spelling
 We will allow you to share tests with the class. To do this 
  * Make a fork of the class repo: https://github.com/BU-CS320/Fall-2018
