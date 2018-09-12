@@ -27,7 +27,7 @@
 We will allow you to share tests with the class. To do this 
  * Make a fork of the class repo: https://github.com/BU-CS320/Fall-2018
  * clone your fork locally (keep it separate from your assignment clone)
- * go to the test directory (in this case Fall-2018/assignments/week2/lab2/tests)
+ * go to the test directory (in this case ```Fall-2018/assignments/week2/lab2/tests```)
  * add a test
  * push the test up to your fork
  * https://help.github.com/articles/creating-a-pull-request/
