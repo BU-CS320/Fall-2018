@@ -35,7 +35,7 @@ If you are having ```git``` issues, run ```git status``` and call on Mark for he
 
 ## Notes
 ### 9:05 Lab
- * I made a typo on the ```Craziests``` data type that will result in an error ```Train Craziests (List a)``` should have been ```Train (Craziests a) (List a)```.
+ * I made a typo on the ```Craziests``` data type that will result in an error. ```Train Craziests (List a)``` should have been ```Train (Craziests a) (List a)```.
 
 ## Optional Bonus: Sharing Tests, and correcting my spelling
 We will allow you to share tests with the class. To do this 
