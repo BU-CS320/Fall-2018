@@ -114,7 +114,7 @@ data Weekday -- = ...  deriving Show
 favoriteDay :: Weekday
 favoriteDay = undefined
 
--- write a function that returns true if it is a weekday
+-- write a function that returns true if it is a weekend
 isWeekend :: Weekday -> Bool
 isWeekend  _     = undefined
 
