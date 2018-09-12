@@ -8,14 +8,27 @@ data Bool = True | False     deriving Show
 
 data Nat =  Zero | Succ Nat    deriving Show
 
--- define the following functions
+
 
 not :: Bool -> Bool
-not _ = undefined
+not False = True
+not True  = False
+
+
+and :: Bool -> Bool -> Bool
+and True True = True
+and _ _       = False
+
 
 or :: Bool -> Bool -> Bool
-or _ _ = undefined
+or True _  = True
+or _ True  = True
+or _ _     = False
 
+
+-- define the following function
+xor :: Bool -> Bool -> Bool
+xor _ _  = undefined
 
 -- you can also define an "if" construct
 cond  True  x  y = x                             
@@ -26,55 +39,71 @@ cond  False x  y = y
 -- constants are like 0-ary functions (no arguments)
 -- and must be in lower case
 
--- define the first 5 numbers
+-- the first 5 numbers
+zero = Zero
+one = (Succ zero)
+two = Succ one
+three = Succ two
+four = Succ three
+five = Succ four
 
-zero :: Nat
-zero = undefined
 
-one :: Nat
-one = undefined
+-- the 6 and 9
+six :: Nat
+six = undefined
 
-two :: Nat
-two = undefined
+nine :: Nat
+nine = undefined
 
-three :: Nat
-three = undefined
+add ::  Nat -> Nat -> Nat
+add x Zero = x
+add x (Succ y) = Succ (add x y)
 
-four :: Nat
-four = undefined
+mult ::  Nat -> Nat -> Nat
+mult x Zero     = Zero
+mult x (Succ y) = add x (mult x y) 
 
-five :: Nat
-five = undefined
-
--- we defined addition in lab
-
--- define the following functions
-mult :: Nat -> Nat -> Nat
-mult _ _     = undefined
-
-exp :: Nat -> Nat -> Nat
-exp _ _     = undefined
-
--- relational operators on Nat
+exp ::  Nat -> Nat -> Nat
+exp x Zero      = (Succ Zero)
+exp x (Succ y)  = mult x (exp x y)
 
 -- when are 2 Nats equal?
 eq :: Nat -> Nat -> Bool
-eq _ _     = undefined
+eq Zero Zero         = True
+eq (Succ x) (Succ y) = eq x y
+eq _  _              = False
 
 -- when are 2 Nats not equal?
 ne :: Nat -> Nat -> Bool
-ne _ _     = undefined
+ne x y = not (eq x y)
 
 -- the less then function, when is the first argument less then the 2nd
 lt :: Nat -> Nat -> Bool
-lt _ _     = undefined
+lt Zero (Succ x)     = True
+lt (Succ x) (Succ y) = lt x y
+lt _ _               = False 
+
+le x y = or (lt x y) (eq x y)
+
+gt x y = lt y x
+
+ge x y = le y x
+
+-- define the following function
+
+isEven :: Nat -> Bool
+isEven _ = undefined
+
+-- relational operators on Nat
+
+
 
 
 -- misc arith functions
 
 --return the largest of 2 Nats
 max :: Nat -> Nat -> Nat
-max _ _     = undefined
+max x y = cond (lt x y) y x
 
 
 
