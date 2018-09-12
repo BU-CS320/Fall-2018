@@ -217,7 +217,7 @@ length _  = undefined
 -- in lab we saw that we can return Maybe data when we want to return something but might not  
 data Maybe x = Nothing | Just x     deriving Show
 
--- functions that returns something if it is the last element of the list and Nothing
+-- functions that returns something if it is the last element of the list and Nothing if the list is empty
 
 last :: (List a) -> (Maybe a)
 last _  = undefined
@@ -253,7 +253,7 @@ data Tree a = Null | Node (Tree a) a (Tree a)     deriving Show
 size :: (Tree a) -> Nat
 size  _  = undefined
 
--- suppose the height is number of nodes in longest path
+-- suppose the height is number of nodes in longest path from root to leaf
 
 height :: (Tree a) -> Nat
 height  _  = undefined
