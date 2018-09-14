@@ -94,12 +94,6 @@ ge x y = le y x
 isEven :: Nat -> Bool
 isEven _ = undefined
 
--- relational operators on Nat
-
-
-
-
--- misc arith functions
 
 --return the largest of 2 Nats
 max :: Nat -> Nat -> Nat
