@@ -9,7 +9,7 @@ main = defaultMain unitTests
 unitTests =
   testGroup
     "Tests"
-    [andTrueTrue, mult3and5, lectureDayApril]
+    [andTrueTrue, mult3and5, lectureDayApril, eq_list2and3]
 
 -- this function converts from our custom Bools to the standard Bools so we have a lot of automatic things already defined
 fromhwBoolToStandardBool :: Hw.Bool -> Prelude.Bool
@@ -32,3 +32,7 @@ mult3and5 =
 -- A lecture day in the months outside of the Fall 2018 Semester should not count
 lectureDayApril = 
   testCase "lectureDay (Date April 3 Tuesday) = False" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.lectureDay (Hw.Date Hw.April Hw.three Hw.Tuesday)))
+
+-- ListNats of unequal length should not be equal
+eq_list2and3 = 
+  testCase "eq_list [1,2] [1,2,3] = False" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.eq_list (Hw.ConsNat Hw.one (Hw.ConsNat Hw.two Hw.NilNat)) (Hw.ConsNat Hw.one (Hw.ConsNat Hw.two (Hw.ConsNat Hw.three Hw.NilNat)))))
