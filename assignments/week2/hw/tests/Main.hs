@@ -57,24 +57,24 @@ mult3and5 =
 
 -- manhattanDistance of the same point = 0
 distance0 =
-  testCase "Distance between (1,2) and (1,2)" $ assertEqual [] 0 (fromNatToInteger(Hw.manhattanDistance (Hw.Point Hw.one Hw.two) (Hw.Point Hw.one Hw.two)))
+  testCase "Distance between (1,2) and (1,2)" $ assertEqual [] 0 (fromNatToInteger(Hw.manhattanDistance (Hw.makePoint Hw.one Hw.two) (Hw.makePoint Hw.one Hw.two)))
 
 -- Vertical Distance (9, 3) (9, 9) = 6
 distanceVertical =
-  testCase "Distance between (9, 3) and (9, 9)" $ assertEqual [] 6 (fromNatToInteger(Hw.manhattanDistance (Hw.Point Hw.nine Hw.three) (Hw.Point Hw.nine Hw.nine)))
+  testCase "Distance between (9, 3) and (9, 9)" $ assertEqual [] 6 (fromNatToInteger(Hw.manhattanDistance (Hw.makePoint Hw.nine Hw.three) (Hw.makePoint Hw.nine Hw.nine)))
 
 
 -- Horizontal Distance (3, 9) (9, 9) = 6
 distanceHorizontal =
-  testCase "Distance between (3, 9) and (9, 9)" $ assertEqual [] 6 (fromNatToInteger(Hw.manhattanDistance (Hw.Point Hw.three Hw.nine) (Hw.Point Hw.nine Hw.nine)))
+  testCase "Distance between (3, 9) and (9, 9)" $ assertEqual [] 6 (fromNatToInteger(Hw.manhattanDistance (Hw.makePoint Hw.three Hw.nine) (Hw.makePoint Hw.nine Hw.nine)))
 
 -- Positive Slope (1, 2) (3, 4) = 4
 distancePosSlope =
-  testCase "Distance between (1, 2) and (3, 4)" $ assertEqual [] 4 (fromNatToInteger(Hw.manhattanDistance (Hw.Point Hw.one Hw.two) (Hw.Point Hw.three Hw.four)))
+  testCase "Distance between (1, 2) and (3, 4)" $ assertEqual [] 4 (fromNatToInteger(Hw.manhattanDistance (Hw.makePoint Hw.one Hw.two) (Hw.makePoint Hw.three Hw.four)))
 
 -- Negative Slope (1, 5) (2, 3) = 3
 distanceNegslope =
-  testCase "Distance between (1, 5) and (2, 3)" $ assertEqual [] 3 (fromNatToInteger(Hw.manhattanDistance (Hw.Point Hw.one Hw.five) (Hw.Point Hw.two Hw.three)))
+  testCase "Distance between (1, 5) and (2, 3)" $ assertEqual [] 3 (fromNatToInteger(Hw.manhattanDistance (Hw.makePoint Hw.one Hw.five) (Hw.makePoint Hw.two Hw.three)))
 
 ------------------------------------------------------------------------
 ------------------------------------------------------------------------
