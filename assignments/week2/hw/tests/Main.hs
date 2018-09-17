@@ -11,6 +11,8 @@ unitTests =
     "Tests"
     [andTrueTrue, 
     mult3and5,
+    isFourEven,
+    isNineEven,
     distance0,
     distanceVertical,
     distanceHorizontal,
@@ -50,6 +52,13 @@ andTrueTrue =
 -- the defined numbers should add the correct way
 mult3and5 =
   testCase "3 * 5 = 15" $ assertEqual [] 15 (fromNatToInteger (Hw.mult Hw.three Hw.five))
+  
+-- isEven testing
+isFourEven =
+  testCase "4 is even" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.isEven Hw.four))
+  
+isNineEven =
+  testCase "9 is not even" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isEven Hw.nine))
 
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
