@@ -50,6 +50,27 @@ andTrueTrue =
 -- the defined numbers should add the correct way
 mult3and5 =
   testCase "3 * 5 = 15" $ assertEqual [] 15 (fromNatToInteger (Hw.mult Hw.three Hw.five))
+  
+-- isEven testing
+isFourEven =
+  testCase "4 is even" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.isEven Hw.four))
+  
+isNineEven =
+  testCase "9 is not even" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isEven Hw.nine))
+  
+-- isWeekend testing
+isMondayWeekend =
+  testCase "Monday is not a weekend" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isWeekend Hw.Monday))
+  
+isSundayWeekend =
+  testCase "Sunday is a weekend" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.isWeekend Hw.Sunday))
+  
+-- needToDoWork testing
+workDoneMarch =
+  testCase "Work is not done in March" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.needToDoWork Hw.March))
+  
+workDoneOctober =
+  testCase "Work is done in October" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.needToDoWork Hw.October))
 
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
