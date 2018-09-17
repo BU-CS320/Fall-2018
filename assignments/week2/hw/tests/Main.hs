@@ -11,6 +11,8 @@ unitTests =
     "Tests"
     [andTrueTrue, 
     mult3and5,
+    isFourEven,
+    isNineEven,
     distance0,
     distanceVertical,
     distanceHorizontal,
@@ -57,20 +59,6 @@ isFourEven =
   
 isNineEven =
   testCase "9 is not even" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isEven Hw.nine))
-  
--- isWeekend testing
-isMondayWeekend =
-  testCase "Monday is not a weekend" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isWeekend Hw.Monday))
-  
-isSundayWeekend =
-  testCase "Sunday is a weekend" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.isWeekend Hw.Sunday))
-  
--- needToDoWork testing
-workDoneMarch =
-  testCase "Work is not done in March" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.needToDoWork Hw.March))
-  
-workDoneOctober =
-  testCase "Work is done in October" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.needToDoWork Hw.October))
 
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
