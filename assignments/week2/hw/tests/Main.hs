@@ -13,6 +13,13 @@ unitTests =
     mult3and5,
     isFourEven,
     isNineEven,
+    isSundayWeekend,
+    isMondayWeekend,
+    isTuesdayWeekend,
+    isWednesdayWeekend,
+    isThursdayWeekend,
+    isFridayWeekend,
+    isSaturdayWeekend,
     distance0,
     distanceVertical,
     distanceHorizontal,
@@ -59,6 +66,30 @@ isFourEven =
   
 isNineEven =
   testCase "9 is not even" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isEven Hw.nine))
+
+
+-- isWeekend testing 
+isSundayWeekend = 
+  testCase "Sunday is on weekend" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.isWeekend Hw.Sunday))
+
+isMondayWeekend = 
+  testCase "Monday is not during weekend" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isWeekend Hw.Monday))
+
+isTuesdayWeekend = 
+  testCase "Tuesday is not during weekend" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isWeekend Hw.Tuesday))
+
+isWednesdayWeekend = 
+  testCase "Wednesday is not during weekend" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isWeekend Hw.Wednesday))
+
+isThursdayWeekend = 
+  testCase "Thursday is not during weekend" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isWeekend Hw.Thursday))
+
+isFridayWeekend = 
+  testCase "Friday is not during weekend" $ assertEqual [] Prelude.False (fromhwBoolToStandardBool (Hw.isWeekend Hw.Friday))
+
+isSaturdayWeekend = 
+  testCase "Saturday is on weekend" $ assertEqual [] Prelude.True (fromhwBoolToStandardBool (Hw.isWeekend Hw.Saturday))
+
 
 -------------------------------------------------------------------------
 -------------------------------------------------------------------------
