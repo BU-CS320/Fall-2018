@@ -52,7 +52,8 @@ Implement the functions
  * it is best to pull in form the upstream after you have committed and pushed to your private repo.
 
 ## Notes
-You can ignore the warning about ```warning: [-Wmissing-home-modules]``` it seems to be related to this bug https://github.com/haskell/cabal/issues/4711
+ * You can ignore the warning about ```warning: [-Wmissing-home-modules]``` it seems to be related to this bug https://github.com/haskell/cabal/issues/4711.
+ * As I mentioned in the later labs the ```type Set = [Integer]``` in ```Set.hs``` leaks some information unintantionally.  It would have been more correct to write ```data Set = Set [Integer]```.  Since the leaky way is easier to implement and gives us a way to test, I will leave the assignment like that.
 ### 9:05 Lab
  * I incorrectly stated that ```BinarySearchTrees``` didn't have an "empty".  This is wrong, it is ```Null```
    
