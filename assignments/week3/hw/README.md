@@ -21,10 +21,10 @@ Read about Haskell modules: https://www.haskell.org/tutorial/modules.html
 1. check that you can see your solutions on the website for your private repo
 
 ## REPL commands
-```:load x``` will load a different module, in this lab the options are ```DataProblems```, ```TypeProblems```, ```Set```, ```BinarySearchTrees```, ```HigherOrderProblems```, ```WarmUp```
-```:reload``` reloads the module
-```:type x``` tells you the type of x
-```:q``` quits out of the REPL
+ * ```:load x``` will load a different module, in this lab the options are ```DataProblems```, ```TypeProblems```, ```Set```, ```BinarySearchTrees```, ```HigherOrderProblems```, ```WarmUp```
+ * ```:reload``` reloads the module
+ * ```:type x``` tells you the type of x
+ * ```:q``` quits out of the REPL
 
 ## Hints
  * start early and submit tests
