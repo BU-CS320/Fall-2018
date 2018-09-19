@@ -22,6 +22,6 @@ data Student -- deriving Show
 me :: Student
 me = undefined
 
--- make a student first name, a last name, a BU ID, and a class year.  This functions should just return "CS" majors.
+-- Make a student from a first name, a last name, a BU ID, and a class year.  This functions should just return "CS" majors.
 mkStudent :: String -> String -> String -> Integer -> Maybe Student
 mkStudent  = undefined
