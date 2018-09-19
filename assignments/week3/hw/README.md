@@ -5,7 +5,7 @@ Lab and HW are combined this week.
 Read about Haskell modules: https://www.haskell.org/tutorial/modules.html
 
 ## Setup (similar to [lab2](../lab2))
-1. Follow this [link](TODO) to create an assignment repository
+1. Follow this [link](https://classroom.github.com/a/fyIl3cE-) to create an assignment repository
 1. Clone your personal assignment repo with the command line ```git clone https://github.com/BU-CS320/week2-username.git``` with ```username``` replaced with your user name
 1. ```cd``` into the newly created directory by typing ```cd week2-username``` with ```username``` replaced with your user name
 1. set the public upstream repo with ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
