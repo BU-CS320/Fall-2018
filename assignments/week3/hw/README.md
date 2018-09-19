@@ -4,7 +4,8 @@ Lab and HW are combined this week.
 ## Before
 Read about Haskell modules: https://www.haskell.org/tutorial/modules.html
 
-## Setup (similar to [lab2](../lab2))
+## Setup
+similar to [lab2](../../week2/lab2)
 1. Follow this [link](https://classroom.github.com/a/fyIl3cE-) to create an assignment repository
 1. Clone your personal assignment repo with the command line ```git clone https://github.com/BU-CS320/week2-username.git``` with ```username``` replaced with your user name
 1. ```cd``` into the newly created directory by typing ```cd week2-username``` with ```username``` replaced with your user name
@@ -13,7 +14,8 @@ Read about Haskell modules: https://www.haskell.org/tutorial/modules.html
    1. run ```cabal new-repl``` (or ```cabal repl``` if gets "Failed to load interface") in the terminal (it is important that you do this in the ```hw``` directory).
    1. in your favorite text editor open ```src/WarmUp.hs``` and answer the questions
 
-## Submit (similar to [lab2](../lab2))
+## Submit
+similar to [lab2](../../week2/lab2)
 1. run the tests by running ```cabal test``` (this step is less important for this lab since many of the answers are open ended)
 1. run ```git status``` to make sure everything is ok
 1. run ```git commit -a -m "done with another HW!"``` to make a commit on your laptop
