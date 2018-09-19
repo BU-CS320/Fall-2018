@@ -30,7 +30,7 @@ Read about Haskell modules: https://www.haskell.org/tutorial/modules.html
 ### ```Set.hs```
 Implement a Set as a sorted list.
 ### ```BinarySearchTrees.hs```
-Implement a Set Binary Search Tree.
+Implement a Binary Search Tree.
 ### ```Outside.hs```
 Implement the functions (you can only use what the modules expose). Note that both ```Set``` and ```BinarySearchTrees``` have ```insert``` as stated in the reading you can call the specific function using the fully qualified name ```Set.insert``` and ```BinarySearchTrees.insert```.
 ### ```DataProblems.hs```
@@ -50,6 +50,7 @@ Implement the functions
  * it is best to pull in form the upstream after you have committed and pushed to your private repo.
 
 ## Notes
+You can ignore the warning about ```warning: [-Wmissing-home-modules]``` it seems to be related to this bug https://github.com/haskell/cabal/issues/4711
 ### 9:05 Lab
  * I incorrectly stated that ```BinarySearchTrees``` didn't have an "empty".  This is wrong, it is ```Null```
    
