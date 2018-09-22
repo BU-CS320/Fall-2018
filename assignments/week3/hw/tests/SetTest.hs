@@ -49,6 +49,11 @@ setFromList :: [Integer] -> Set
 setFromList [] = empty
 setFromList (x:xs) = (Set.insert x (setFromList xs))
 
+-- Take a set and make a list
+listFromSet :: Set -> [Integer]
+listFromSet [] = []
+listFromSet (x:xs) = x:(listFromSet xs)
+
 --------------------------------------------------------------------------
 ------------------------------ CONTAINS TESTS ----------------------------
 
@@ -74,19 +79,19 @@ containsFalse =
 ------------------------------- INSERT TESTS -----------------------------
 
 insertEmpty =
-  testCase "Insert 3 into []" $ assertEqual [] (setFromList[3]) (insert 3 (setFromList []))
+  testCase "Insert 3 into []" $ assertEqual [] [3] (listFromSet (insert 3 (setFromList [])))
 
 insertRear =
-  testCase "Insert 5 into [1,2,3,4]" $ assertEqual [] (setFromList[1,2,3,4,5]) (insert 5 (setFromList [1,2,3,4]))
+  testCase "Insert 5 into [1,2,3,4]" $ assertEqual [] [1,2,3,4,5] (listFromSet (insert 5 (setFromList [1,2,3,4])))
 
 insertFront =
-  testCase "Insert 1 into [2,3,4,5]" $ assertEqual [] (setFromList[1,2,3,4,5]) (insert 1 (setFromList [2,3,4,5]))
+  testCase "Insert 1 into [2,3,4,5]" $ assertEqual [] [1,2,3,4,5] (listFromSet (insert 1 (setFromList [2,3,4,5])))
 
 insertMid =
-  testCase "Insert 3 into [1,2,4,5]" $ assertEqual [] (setFromList[1,2,3,4,5]) (insert 3 (setFromList [1,2,4,5]))
+  testCase "Insert 3 into [1,2,4,5]" $ assertEqual [] [1,2,3,4,5] (listFromSet (insert 3 (setFromList [1,2,4,5])))
 
 insertDuplicate =
-  testCase "Insert 3 into [1,2,3,4,5]" $ assertEqual [] (setFromList[1,2,3,4,5]) (insert 1 (setFromList [1,2,3,4,5]))
+  testCase "Insert 3 into [1,2,3,4,5]" $ assertEqual [] [1,2,3,4,5] (listFromSet (insert 1 (setFromList [1,2,3,4,5])))
 
 --------------------------------------------------------------------------
 ------------------------------ ISSUBSET TESTS ----------------------------
