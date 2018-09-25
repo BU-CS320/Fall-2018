@@ -10,4 +10,6 @@ unitTests =
     "DataProblems"
     []
 	
-	
+
+likesFav =
+  testCase "favorite should be true" $ assertBool [] (willILikeIt favorite)
