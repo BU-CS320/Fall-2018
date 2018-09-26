@@ -1,9 +1,6 @@
 # HW Due 10/2
 Lab and HW are combined this week.
 
-## Before
-Read about Haskell modules: https://www.haskell.org/tutorial/modules.html
-
 ## Setup
 similar to [lab2](../../week2/lab2)
 1. Follow this [link](TODO)) to create an assignment repository
