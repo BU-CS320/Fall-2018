@@ -3,11 +3,11 @@ Lab and HW are combined this week.
 
 ## Setup
 similar to [lab2](../../week2/lab2)
-1. Follow this [link](TODO)) to create an assignment repository
+1. Follow this [link](https://classroom.github.com/a/0AhHIoTK)) to create an assignment repository
 1. Clone your personal assignment repo with the command line ```git clone https://github.com/BU-CS320/week2-username.git``` with ```username``` replaced with your user name
 1. ```cd``` into the newly created directory
 1. set the public upstream repo with ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
-1. ```cd```  into this assignment (```cd assignments/week3/hw```), first we will write a greeting
+1. ```cd```  into this assignment (```cd assignments/week4/hw```), first we will write a greeting
    1. run ```cabal new-repl``` (or ```cabal repl``` if gets "Failed to load interface") in the terminal (it is important that you do this in the ```hw``` directory).
    1. in your favorite text editor open ```src/WarmUp.hs``` and answer the questions
 
