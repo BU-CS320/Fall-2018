@@ -26,7 +26,7 @@ data IndexTree k v = IndexTree  (Ordering k) (Ordering v) (IndexTreeInner k v)
 data IndexTreeInner k v = Null | Node (IndexTreeInner k v) k [v] (IndexTreeInner k v) 
 
 
-empty ::  (Ordering k) -> (Ordering v) -> IndexTreeInner k v  
+empty ::  (Ordering k) -> (Ordering v) -> IndexTree k v  
 empty = undefined
 
 
