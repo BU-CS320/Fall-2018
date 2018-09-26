@@ -1,4 +1,4 @@
-module IndexTree(IndexTree(Null), insert, lookup, member, keys, pairs, invert) where  -- DO NOT EDIT THIS LINE
+module IndexTree(IndexTree(Null), insert, lookupKey, member, keys, pairs, invert) where  -- DO NOT EDIT THIS LINE
     
         
 
