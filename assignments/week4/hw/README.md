@@ -34,7 +34,8 @@ similar to [lab2](../../week2/lab2)
  * it is best to pull in form the upstream after you have committed and pushed to your private repo.
 
 ## Notes
-none yet
+### 9:05 Lab
+There were a couple of mistakes that I have now corrected.
    
 ## Sharing Tests, and correcting my spelling
 We will allow you to share tests with the class. To do this 
