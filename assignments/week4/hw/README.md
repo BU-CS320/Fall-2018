@@ -34,6 +34,7 @@ similar to [lab2](../../week2/lab2)
  * it is best to pull in form the upstream after you have committed and pushed to your private repo.
 
 ## Notes
+Annoying List was too hard so I added a way to put elements at the front of the list (cons).
 ### 9:05 Lab
 There were a couple of mistakes that I have now corrected.
    
