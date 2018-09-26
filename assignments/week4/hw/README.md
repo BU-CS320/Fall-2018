@@ -37,6 +37,9 @@ similar to [lab2](../../week2/lab2)
 Annoying List was too hard so I added a way to put elements at the front of the list (cons).
 ### 9:05 Lab
 There were a couple of mistakes that I have now corrected.
+### 3:35 Lab
+A student asked why we couldn't make an instance of the insult typeclass for `String` this [stackoverflow post](https://stackoverflow.com/questions/5941701/why-can-i-not-make-string-an-instance-of-a-typeclass) has a very good answer 
+
    
 ## Sharing Tests, and correcting my spelling
 We will allow you to share tests with the class. To do this 
