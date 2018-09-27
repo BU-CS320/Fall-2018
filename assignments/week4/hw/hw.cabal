@@ -10,7 +10,7 @@ cabal-version:        >=1.10
 
 
 library
-  exposed-modules:    WarmUp, IndexTree, IndexTreeBad, HigherOrderProblems, AnnoyingLists
+  exposed-modules:    WarmUp, IndexTree, IndexTreeBad, HigherOrderProblems, AnnoyingLists, IndexAndConcordance, TypeclassProblems
   ghc-options:        -fwarn-incomplete-patterns -fwarn-incomplete-uni-patterns
   build-depends:      base >= 4.7 && < 5
   hs-source-dirs:     src
