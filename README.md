@@ -5,7 +5,17 @@
 The notes and assignments for 320
 
 ## Forking and Adding tests
-We will allow you to share tests with the class. To do this 
+We will allow you to share tests with the class.  These instructions are a work in progress, please add to them.
+### Small changes
+ 1. Click the pencil in the upper right corner
+ 1. edit the file
+ 1. press "Create a new branch for this commit and start a pull request"
+ 1. click the make pull request button
+ 1. wait for aproval, you will see your request under "Pull requests"
+ 1. Someone will merge you commit or comment about why it can't be merged
+ 1. if there are problems with you commit you will need to follow some of the instructions bellow to fix it
+
+### Large changes
  * Make a fork of the class repo: https://github.com/BU-CS320/Fall-2018
  * clone your fork locally (keep it separate from your assignment clone)
  * go to the test directory (in this case Fall-2018/assignments/week2/lab2/tests)
