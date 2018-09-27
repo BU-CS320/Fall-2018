@@ -13,7 +13,8 @@ We will allow you to share tests with the class. To do this
  * push the test up to your fork
  * https://help.github.com/articles/creating-a-pull-request/
  * If your test looks good we will accept it
- Once you have followed the steps for forking a repository all you need to do now is clone the forked repository into your terminal. Then follow these steps:
+
+Once you have followed the steps for forking a repository all you need to do now is clone the forked repository into your terminal. Then follow these steps:
  1. Need to add the ability to update your forked repository to keep it up to date with the master branch
  	1. '''cd'' into your forked repo
  	1. type '''git remote add upstream https://github.com/BU-CS320/Fall-2018.git''' 
