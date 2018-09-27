@@ -5,6 +5,14 @@
 The notes and assignments for 320
 
 ## Forking and Adding tests
+We will allow you to share tests with the class. To do this 
+ * Make a fork of the class repo: https://github.com/BU-CS320/Fall-2018
+ * clone your fork locally (keep it separate from your assignment clone)
+ * go to the test directory (in this case Fall-2018/assignments/week2/lab2/tests)
+ * add a test
+ * push the test up to your fork
+ * https://help.github.com/articles/creating-a-pull-request/
+ * If your test looks good we will accept it
  Once you have followed the steps for forking a repository all you need to do now is clone the forked repository into your terminal. Then follow these steps:
  1. Need to add the ability to update your forked repository to keep it up to date with the master branch
  	1. '''cd'' into your forked repo
