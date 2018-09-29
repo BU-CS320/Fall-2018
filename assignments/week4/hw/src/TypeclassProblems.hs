@@ -40,13 +40,13 @@ instance Eq NotTransitive where
   x == y = undefined
 
 -- give an examples where "examplex'' == exampley''" and exampley'' == examplez''"  but "examplex'' /= examplez''"
-examplex'' :: NotSymmetric
+examplex'' :: NotTransitive
 examplex'' = undefined
 
-exampley'' :: NotSymmetric
+exampley'' :: NotTransitive
 exampley'' = undefined
 
-examplez'' :: NotSymmetric
+examplez'' :: NotTransitive
 examplez'' = undefined
 
 
