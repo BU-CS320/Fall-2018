@@ -1,4 +1,4 @@
-module IndexTreeBad(IndexTree(),empty, insert) where 
+module IndexTreeBad(IndexTree(),empty, insert, Compare(LessThan, EqualTo, GreaterThan),Ordering(Ordering) ) where 
 import Prelude hiding (lookup, elem, Ordering)
 
 data Compare = LessThan | EqualTo | GreaterThan
