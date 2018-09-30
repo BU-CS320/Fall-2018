@@ -1,7 +1,7 @@
 module HigherOrderProblems where
 
 -- this forces you to work with our more annoying lists, DO NOT CHANGE THE FOLLOWING 2 LINES
-import Prelude hiding (map, foldr, length) 
+import Prelude hiding (map, foldr, length, filter) 
 import AnnoyingLists
 
 
