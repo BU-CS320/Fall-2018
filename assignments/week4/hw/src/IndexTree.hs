@@ -43,7 +43,7 @@ keys  = undefined
 
 
 -- pairs returns a list of (key,value) pairs for each in the index tree in any order
-pairs :: (IndexTree k v)  -> [(k,v)]
+pairs :: (IndexTree k v)  -> [(k,[v])]
 pairs  = undefined
 
 
