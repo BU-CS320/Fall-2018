@@ -5,6 +5,8 @@ import Test.Tasty.HUnit (assertEqual, assertBool, testCase)
 
 import IndexTree
 
+import Data.List (sort)
+areEqual a b = sort a == sort b
 
 unitTests =
   testGroup
@@ -32,7 +34,7 @@ test_keys =
   testCase "keys for exampleTree1" $ assertEqual [] ([1,2,3,4,5,6]) (keys exampleTree1)
 
 test_pairs =
-  testCase "pairs for exampleTree1" $ assertEqual [] ([(1,"homework"),(2,"damn"),(3,"is"),(4,"this"),(5,"hard"),(6,"so")]) (pairs exampleTree1)
+  testCase "pairs for exampleTree1" $ assertBool [] (areEqual ([(1,"homework"),(2,"damn"),(3,"is"),(4,"this"),(5,"hard"),(6,"so")]) (pairs exampleTree1))
 
 test_invert =
   testCase "invert exampleTree1" $ assertEqual [] (insert "this" 4 (insert "homework" 1 (insert "is" 3 (insert "so" 6 (insert "damn" 2 (insert "hard" 5 Null)))))) (invert exampleTree1)
