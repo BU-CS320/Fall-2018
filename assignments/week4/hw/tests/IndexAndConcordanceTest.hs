@@ -9,7 +9,7 @@ import IndexAndConcordance(cleanup,createWordLists,makePairs, addPageNumber, cre
 unitTests =
   testGroup
     "IndexAndConcordanceTest"
-    [cleanUpTest]
+    [cleanUpTest,createWordListsTest]
 
     str1 = "Hey there student, I hope your test case did not FAIL. LOSER."
     str1Ans = "hey there student  i hope your test case did not fail  loser "
