@@ -11,16 +11,19 @@ data Ast =
 eval :: Ast -> Integer
 eval = undefined
 
--- show the pre evaluated expression, see tests
+-- show the unevaluated expression, see tests
+
 instance Show Ast where
   show _ = undefined
 
 
--- equality on eval result
+-- equality on the values returned after evaluation
+
 instance Eq Ast where
   _ == _ = undefined
   
 -- order on eval result
+
 instance Ord Ast where
   _ <= _ = undefined
   

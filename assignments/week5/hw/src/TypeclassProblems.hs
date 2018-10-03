@@ -1,9 +1,11 @@
 module TypeclassProblems where
 
--- defeine data type for all 7 days of the week
+-- define data type for all 7 days of the week
 data DayOfTheWeek -- = ...
 
--- often built-in haskell classes come with nice syntax, when the following is defined try this in the console [Monday .. Friday]
+-- often built-in haskell classes come with nice syntax, when the following is defined try this 
+-- in the console [Monday .. Friday]
+
 instance Enum DayOfTheWeek where
   --toEnum :: Integer -> DayOfTheWeek (start counting at 0)
   toEnum 0 = undefined
@@ -43,8 +45,8 @@ instance (HasExample a, HasExample b) => HasExample (a,b) where
 instance HasExample b => HasExample (a -> b) where
   example = undefined
   
-iSurewhishIHadThisFunction :: Integer -> Bool -> (a ->b ) -> (Integer, (Bool, DayOfTheWeek))
-iSurewhishIHadThisFunction = example -- it's a little silly but the code is automatically generated!
+iSureWishIHadThisFunction :: Integer -> Bool -> (a ->b ) -> (Integer, (Bool, DayOfTheWeek))
+iSureWishIHadThisFunction = example -- it's a little silly but the code is automatically generated!
 
 
 -- next we will work with a custom type class that gives all the things
@@ -66,7 +68,6 @@ boolEq  :: Bool -> Bool
 boolEq = (\b  -> b == b)
 
 --try "forAll boolEq" in the console!
-
 
 -- finish up the instances on these types
 instance AllTheThings DayOfTheWeek where
