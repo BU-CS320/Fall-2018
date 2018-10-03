@@ -11,14 +11,15 @@ import WarmUp(biggerNumber)
 unitTests =
   testGroup
     "WarmUpTest"
-    [] -- put tests in this list, so [testName, testName2]
+    [biggerNumberTest1, biggerNumberPropertyTest] -- put tests in this list, so [testName, testName2]
 
 -- write a nice comment here
 -- testName =
 --  testCase "put a nice description here" $ assertBool [] $ undefined
 
 -- assert Bool means it is true
-
+biggerNumberTest1 =
+  testCase "output has to be greater than input (1)" $ assertBool [] $ biggerNumber 1 > 1
 
 
 
@@ -29,5 +30,9 @@ unitTests =
 --testName2 =
 --  testProperty "put a nice description here" $ undefined
 
+propertyFun :: Integer -> Bool
+propertyFun x = biggerNumber x > x
 
+biggerNumberPropertyTest =
+  testProperty "output always has to be greater than input" $ propertyFun
 
