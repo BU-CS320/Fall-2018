@@ -24,7 +24,7 @@ test-suite test
   hs-source-dirs:
     tests
   main-is: Main.hs
-  other-modules: HigherOrderProblemsTest, IndexTreeBadTest, IndexTreeTest, WarmUpTest
+  other-modules: HigherOrderProblemsTest, IndexTreeBadTest, IndexTreeTest, WarmUpTest, IndexAndConcordanceTest, TypeclassProblemsTest
   build-depends:
       base >= 4.7 && < 5
     , tasty >= 0.7, tasty-hunit
