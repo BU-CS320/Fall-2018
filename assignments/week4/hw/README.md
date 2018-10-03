@@ -1,4 +1,4 @@
-# HW Due 10/2
+# HW Due ~~10/2~~ 10/4
 Lab and HW are combined this week.
 
 ## Setup
