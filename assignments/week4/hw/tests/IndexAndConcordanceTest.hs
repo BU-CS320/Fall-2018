@@ -9,4 +9,10 @@ import IndexAndConcordance(cleanup,createWordLists,makePairs, addPageNumber, cre
 unitTests =
   testGroup
     "IndexAndConcordanceTest"
-    []
+    [testingAddPageNum]
+    
+    
+    str = ["hi","there","this","is","a", "test", "CASE"]
+    answer = [(1,"hi"),(1,"there"),(1,"this"),(1,"is"),(1,"a"),(1,"test"),(1,"CASE")]
+    
+    testingAddPageNum = testCase "should return: [(1,"hi"),(1,"there"),(1,"this"),(1,"is"),(1,"a"),(1,"test"),(1,"CASE")]" $ assertEqual [] answer (addPageNumber (1,str))
