@@ -5,7 +5,7 @@ Lab and HW are combined this week.
 Before you begin run: ```cabal install tasty-quickcheck``` (or ```sudo cabal install tasty-quickcheck``` on mac)
 
 Similar to [lab2](../../week2/lab2)
-1. Follow this [link](TODO) to create an assignment repository
+1. Follow this [link](https://classroom.github.com/a/89uRuGVq) to create an assignment repository
 1. Clone your personal assignment repo
 1. set the public upstream repo with ```git remote add upstream https://github.com/BU-CS320/Fall-2018.git```
 1. ```cd```  into this assignment (```cd assignments/week5/hw```), first we will write a greeting
