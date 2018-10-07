@@ -3,11 +3,12 @@ module HigherOrderProblems where
 
 
 -- Write a function sumsq n, which returns the
+-- sum of the squares in the list n. We will use it to find the
 -- sum of the first n natural numbers: 1^2 + 2^2 + ... + n^2
 -- Hint: use foldr, a helper function, and the list 
 -- notation [1..n], which is the Haskell version of
 -- Pythons range(..).
--- Example:  [1..4] => [1,2,3,4]
+-- Example:  sumsqa [1..4] => [1,4,16,36]
 
 sumsqa :: [Integer] -> Integer
 sumsqa n = undefined
