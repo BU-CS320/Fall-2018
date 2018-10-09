@@ -36,7 +36,7 @@ instance HasExample Bool where
 instance HasExample Integer where
   example = undefined
 
-instance HasExample [a] where
+instance HasExample a => HasExample [a] where
   example = undefined
   
 instance (HasExample a, HasExample b) => HasExample (a,b) where
