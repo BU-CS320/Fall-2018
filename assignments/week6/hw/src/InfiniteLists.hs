@@ -206,7 +206,10 @@ collatz1 = undefined
 -- Then write the function (collatz n), which generates the
 -- collatz sequence, in which the collatz1 function is applied
 -- to n until the result is 1 (it is conjectured, but not proved,
--- that there are no infinite such sequences).
+-- that there are no infinite such sequences). For example,
+-- starting with n = 12, one gets the sequence 12, 6, 3, 10, 5, 16, 8, 4, 2, 1
+-- and for n = 19 we have 19, 58, 29, 88, 44, 22, 11, 34, 17, 52, 26, 13, 40, 20, 10, 5, 16, 8, 4, 2, 1.
+-- For n = 27, it takes 111 steps, getting as large as 9232 before descending and finally reaching 1. 
 -- Hint: generate an infinite sequence, filter it using takeWhile,
 -- and then append a 1 to the end.
 
@@ -265,11 +268,11 @@ primes = undefined
 
         
 --(L) Pascal's Triangle: write a function (pascalRow k) which
---    returns the kth row of the triangle as follows:
---   0: 1  1  1  1  1  1
---   1: 1  2  3  4  5  6
---   2: 1  3  6  10 15 21
---   3: 1  4  10 20 35 56
+--    returns the (infinite) kth row of the triangle as follows:
+--   0: 1  1  1  1  1  1 ...
+--   1: 1  2  3  4  5  6 ...
+--   2: 1  3  6  10 15 21 ...
+--   3: 1  4  10 20 35 56 ...
 -- etc.
 
 pascalRow :: Integer -> [Integer]
@@ -280,6 +283,8 @@ pascalRow = undefined
 --   N choose K = 0 if K > N,
 --              = N choose (N-K) if K > N/2
 --              = (N-K)th element of row K of Pascal's Triangle otherwise.
+-- This uses the previous function, but does not otherwise involve infinite lists;
+-- just an example application of the previous.
 
 choose :: Integer -> Integer ->Integer
 choose n k = undefined
