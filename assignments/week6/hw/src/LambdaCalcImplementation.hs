@@ -37,9 +37,7 @@ rename (Identifier v) from to | v == from = (Identifier to)
 
 
 -- the last three functions are just to avoid the annoying case of
--- \ x . ( ( \y . \ x . y ) ) x)
---capture = Lam "x" $ App (Lam "y" $ Lam "x" $ Identifier "y") $ Identifier "x"
-
+-- λ x . ( ( λ y . λ x . y ) ) x) 
 
 -- do all possible applications, rename bound variables as needed
 eval :: Env ->  LambdaExpression -> LambdaExpression
@@ -47,12 +45,12 @@ eval = undefined
 
 
 
-
+-- show the unevaluated expression, in a human readable way.  See the tests for some examples.
 instance Show LambdaExpression where
   show _ = undefined
 
--- equality on eval result, where the names of bindings don't matter
--- this is called alpha-beta-equality
+-- equality on the structure of the term, where the names of bindings don't matter.  Don't evaluate first.
+-- this is called alpha-equality
 instance Eq LambdaExpression where
   _ == _ = undefined
 
