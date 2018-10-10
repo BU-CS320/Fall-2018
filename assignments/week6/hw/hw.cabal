@@ -26,8 +26,8 @@ test-suite test
   hs-source-dirs:
     tests
   main-is: Main.hs
-  other-modules: UsingLambdaCalcTest, InfiniteListsTest
+  other-modules: UsingLambdaCalcTest, InfiniteListsTest, LambdaCalcImplementationTest
   build-depends:
-      base >= 4.7 && < 5
+      containers, base >= 4.7 && < 5
     , tasty >= 0.11.1, tasty-hunit, tasty-quickcheck
     , hw
