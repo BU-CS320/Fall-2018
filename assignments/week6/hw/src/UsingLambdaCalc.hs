@@ -1,7 +1,6 @@
 module UsingLambdaCalc  where
 import Prelude (undefined,Show) -- DO NOT CHANGE THIS LINE
 
--- TODO fix boilerplate
 
 -- λ-calculus
 --
@@ -10,7 +9,9 @@ import Prelude (undefined,Show) -- DO NOT CHANGE THIS LINE
 
 -- Lambda Calculus in Haskell
 --
--- The λ-calculus is a fundamental notion in computer science and has become part of the culture of programming languages, so much so that many languages, including Java, Python and Haskell, include lambda expressions in their syntax.
+-- The λ-calculus is a fundamental notion in computer science and has become part of the culture of 
+-- programming languages, so much so that many languages, including Java, Python and Haskell, include 
+-- lambda expressions in their syntax.
 --
 --
 -- For instance, the lambda expression
@@ -21,26 +22,27 @@ import Prelude (undefined,Show) -- DO NOT CHANGE THIS LINE
 --
 -- \ x -> \ y -> x y
 --
--- because Haskell only allows well typed functions some lambda expressions cannot be written
+-- because Haskell only allows well-typed functions some lambda expressions cannot be written
 --
 --  λx. (x x)
 --
--- non of the examples in this assignment require that
+-- none of the examples in this assignment require that
 
--- Lets explore the λ-calculus in Haskell by exploring how some primitive ideas, such as boolean values, conditions, and integers can be encoded as λ-expressions.
+-- Let's explore the λ-calculus in Haskell by exploring how some primitive ideas, such as boolean values, 
+-- conditions, and integers can be encoded as λ-expressions.
 
 -- ##  Booleans
 --
--- The basic values in Boolean logic are the constants True and False. These can be encoded as λ-expressions as follows
+-- The basic values in Boolean logic are the constants True and False. These can be encoded as λ-expressions as follows:
 
 true = \ x -> \ y -> x
 false = \ x -> \ y -> y
 
 -- Notice that true takes two arguments and returns the first of them; false takes two arguments and returns the second of them:
 
--- true "then" "else"
+-- true <then> <else>
 --
--- false "then" "else"
+-- false <then> <else>
 --
 
 
@@ -83,7 +85,8 @@ xor = undefined
 --
 -- ##  Natural Numbers
 --
--- Another common construct is a number.  The number n can be represented by the n-fold application of a function to an argument. For instance we can represent 2 as
+-- Another common construct is a number.  The number n can be represented by the n-fold application of a 
+-- function to an argument. For instance we can represent 2 as
 
 two = \ f -> \ start -> f (f start)
 
@@ -102,7 +105,8 @@ three = undefined
 seven = undefined
 
 
--- Now, how would we represent addition? To represent n+m, we would have to compose an n-fold application with an m-fold application:
+-- Now, how would we represent addition? To represent n+m, we would have to compose an n-fold application 
+-- with an m-fold application:
 
 add = undefined
 
