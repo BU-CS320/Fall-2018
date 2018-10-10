@@ -58,7 +58,7 @@ false = \ x -> \ y -> y
 --
 -- Here is the way to do it:
 
-not bool = bool false true
+not = \ bool -> bool false true
 
 
 -- Your turn!  Try to implement the Boolean operator for and.
