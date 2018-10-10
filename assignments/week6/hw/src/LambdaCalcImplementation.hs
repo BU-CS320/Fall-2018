@@ -48,11 +48,11 @@ eval = undefined
 
 
 
-instance Show Ast where
+instance Show LambdaExpression where
   show _ = undefined
 
 -- equality on eval result, where the names of bindings don't matter
 -- this is called alpha-beta-equality
-instance Eq Ast where
+instance Eq LambdaExpression where
   _ == _ = undefined
 
