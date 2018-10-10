@@ -40,22 +40,21 @@ false = \ x -> \ y -> y
 
 -- Notice that true takes two arguments and returns the first of them; false takes two arguments and returns the second of them:
 
--- true <then> <else>
+-- true <then> <else>  --> <then> 
 --
--- false <then> <else>
+-- false <then> <else> --> <else> 
 --
-
+-- where --> indicates beta-conversion as discussed in lecture.
 
 
 -- Now we consider how to define the standard Boolean operators. The not operator must be a λ-expression such that
 --
---             not(true) --> false
+--             not true --> false
 --
 -- and
 --
---             not(false) --> true
+--             not false --> true
 --
--- where --> indicates beta-conversion as discussed in lecture.
 --
 -- Here is the way to do it:
 
