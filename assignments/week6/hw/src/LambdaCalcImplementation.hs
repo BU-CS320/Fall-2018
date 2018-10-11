@@ -20,12 +20,22 @@ boundVars (Lam v bod) = Data.Set.insert v $ boundVars bod
 boundVars (Identifier _) = Data.Set.empty
 boundVars (App f a) = boundVars f `Data.Set.union` boundVars a
 
--- find a name that doesn't conflict with the other bindings, or the environment
-findName :: Env -> LambdaExpression -> String -> String
-findName env exp str | Data.Set.member str $ boundVars exp = findName env exp $ str ++ "'"
-                     | Data.Map.member str env             = findName env exp $ str ++ "'"
-                     | otherwise                           =  str
+-- all the vars appearing in the expression
+vars :: LambdaExpression -> Set String
+vars exp = freeVars exp `Data.Set.union` boundVars exp
 
+-- find a new name that doesn't conflict with a set of other names
+findName :: Set String -> String -> String
+findName avoidNames str | Data.Set.member str avoidNames = findName avoidNames $ str ++ "'"
+                        | otherwise                      = str
+
+-- get all the vars in the environment
+envVars :: Env -> Set String
+envVars = Data.Map.foldr (\ v  temp ->  (vars v) `Data.Set.union` temp ) Data.Set.empty
+
+-- choose a good name given an environment
+goodName :: Env ->  LambdaExpression -> String -> String
+goodName env exp s =  findName (vars exp `Data.Set.union` keysSet env  `Data.Set.union` envVars env) s
 
 -- rename a free var so it doesn't conflict with the other bindings, or the environment
 rename :: LambdaExpression -> String -> String -> LambdaExpression
@@ -36,7 +46,7 @@ rename (Identifier v) from to | v == from = (Identifier to)
                               | otherwise = Identifier v
 
 
--- the last three functions are just to avoid the annoying case of
+-- the last six functions are just to avoid the annoying case of
 -- λ x . ( ( λ y . λ x . y ) ) x) 
 
 -- do all possible applications, rename bound variables as needed
