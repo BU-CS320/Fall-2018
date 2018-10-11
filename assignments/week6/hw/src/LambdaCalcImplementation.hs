@@ -35,7 +35,7 @@ envVars = Data.Map.foldr (\ v  temp ->  (vars v) `Data.Set.union` temp ) Data.Se
 
 -- choose a good name given an environment
 goodName :: Env ->  LambdaExpression -> String -> String
-goodName env exp s =  findName (vars exp `Data.Set.union` keysSet env  `Data.Set.union` envVars env) s
+goodName env exp s =  findName (boundVars exp `Data.Set.union` keysSet env  `Data.Set.union` envVars env) s
 
 -- rename a free var so it doesn't conflict with the other bindings, or the environment
 rename :: LambdaExpression -> String -> String -> LambdaExpression
