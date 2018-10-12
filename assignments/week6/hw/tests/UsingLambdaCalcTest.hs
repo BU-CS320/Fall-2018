@@ -11,9 +11,9 @@ import UsingLambdaCalc(true, false, not, and, or, xor, zero, one,two,three,seven
 unitTests =
   testGroup
     "UsingLambdaCalcTest"
-    [instructorTests
+    [instructorTests,
 -- TODO: add your own tests here!
-    ]
+    somemoreTests]
 
 
 toStandardBool b = b True False
@@ -64,3 +64,17 @@ instructorTests = testGroup
 -- TODO add your own tests here!
 -- TODO test all cases of or, not !
 -- TODO Test individual cases for add, mult, isEven !
+
+somemoreTests = testGroup
+      "somemoreTests"
+      [
+  testCase "(or true true) -> true" $ assertEqual [] True $ toStandardBool (UsingLambdaCalc.or true true),
+  testCase "(or true false) -> true" $ assertEqual [] True $ toStandardBool (UsingLambdaCalc.or true false),
+  testCase "(or false true) -> true" $ assertEqual [] True $ toStandardBool (UsingLambdaCalc.or false true),
+  testCase "(or false false) -> false" $ assertEqual [] False $ toStandardBool (UsingLambdaCalc.or false false),
+
+  testCase "(xor true true) -> false" $ assertEqual [] False $ toStandardBool (UsingLambdaCalc.xor true true),
+  testCase "(xor true false) -> true" $ assertEqual [] True $ toStandardBool (UsingLambdaCalc.xor true false),
+  testCase "(xor false true) -> true" $ assertEqual [] True $ toStandardBool (UsingLambdaCalc.xor false true),
+  testCase "(xor false false) -> false" $ assertEqual [] False $ toStandardBool (UsingLambdaCalc.xor false false)
+      ]
