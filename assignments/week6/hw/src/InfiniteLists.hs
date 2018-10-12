@@ -137,10 +137,9 @@ Prelude> take 10 nats
 
 -- Ok the rest are to be completed in Haskell and handed in!
 
--- With a couple of exceptions (as noted) all these functions
--- must be written in one line, without helper functions or
--- multiple cases or if-then-else. Use the higher-order list
--- functions!
+-- Ungraded bonus: write these functions in one line, without 
+-- helper functions or multiple cases or if-then-else. Use 
+-- the higher-order list functions!
 
 -- HINT: look at the tests to see examples!
 
