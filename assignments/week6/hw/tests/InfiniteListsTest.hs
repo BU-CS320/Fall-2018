@@ -31,7 +31,7 @@ testD2 =  testCase "testD: first 21 correct" $ assertEqual [] [1,2,2,3,3,3,4,4,4
 
 testE =  testCase "testE: first 10 correct" $ assertEqual [] [1,2,6,24,120,720,5040,40320,362880,3628800] $ take 10 factorials
 
-testF =  testCase "testE: first 5 correct" $ assertEqual [] [1,2,3,4,5] $  take 5 (iter (+1) 1)
+testF =  testCase "testF: first 5 correct" $ assertEqual [] [1,2,3,4,5] $  take 5 (iter (+1) 1)
 
 testG = testCase "testG: collatz 17 " $ assertEqual [] [17,52,26,13,40,20,10,5,16,8,4,2,1] $  collatz 17
 
@@ -41,7 +41,7 @@ testI = testCase "testI: first 20 correct" $ assertEqual [] [1,1,2,3,5,8,13,21,3
 
 testJ = testCase "testJ: first 10 correct" $ assertEqual [] [30,60,90,120,150,180,210,240,270,300] $  (take 10 hamming)
 
-testK = testCase "testJ: first 20 correct" $ assertEqual [] [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71] $  (take 20 primes)
+testK = testCase "testK: first 20 correct" $ assertEqual [] [2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71] $  (take 20 primes)
 
 testL = testCase "testL: take 10 (pascalRow 4)" $ assertEqual [] [1,5,15,35,70,126,210,330,495,715] $  take 10 (pascalRow 4)
 
