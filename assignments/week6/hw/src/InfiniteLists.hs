@@ -111,7 +111,8 @@ Prelude> take 10 t
 
 --(xvii)
 
-Prelude> take 5 ("0":["S("++x++")" | x <- t])
+Prelude> t= "0":["S("++x++")" | x <- t]
+Prelude> take 5 t
 
 --(xviii)
 
