@@ -27,6 +27,6 @@ test-suite test
   main-is: Main.hs
   other-modules: MonadProblemsTest, Lang0Test, Lang1Test, Lang2Test, Lang3Test, Lang4Test
   build-depends:
-      base >= 4.7 && < 5
+      containers, base >= 4.7 && < 5
     , tasty >= 0.11.1, tasty-hunit, tasty-quickcheck
     , hw
