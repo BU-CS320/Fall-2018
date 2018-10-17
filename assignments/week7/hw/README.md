@@ -1,6 +1,4 @@
-flatten typeclass (secretly a monad)
-
-# HW Due 10/16
+# HW Due 10/23
 Lab and HW are combined this week.
 
 ## Setup
@@ -39,7 +37,7 @@ similar to [lab2](../../week2/lab2)
  * it is best to pull in form the upstream after you have committed and pushed to your private repo.
 
 ## Notes
-
+added some more words and tests after the first lab.
    
 
 
