@@ -1,6 +1,9 @@
 # HW Due 10/23
 Lab and HW are combined this week.
 
+## Before
+If you have time look at https://hackage.haskell.org/package/base-4.11.1.0/docs/Data-Either.html
+
 ## Setup
 Similar to [lab2](../../week2/lab2), Follow this [link](https://classroom.github.com/a/WMhS3bWk) to create an assignment repository
 
