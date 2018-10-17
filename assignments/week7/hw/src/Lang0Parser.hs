@@ -8,24 +8,27 @@ parseAstInt :: Parser Ast
 parseAstInt = eatS intParser
                 `mapParser` (\ i -> AstInt i)
 
-
+-- parse the pattern "+ x + y + z" into [x,y,z]
 pluses :: Parser [Ast]
 pluses = (rep ( eatS ((literal "+") +++ parseIntOrParens)
             `mapParser` \ (_, ast) -> ast) )
 
 
+-- parse the pattern "(x)" into x
 parseParens :: Parser Ast
 parseParens = eatS (literal "(") +++ parser +++ eatS (literal ")")
                 `mapParser` \ ((_, ast), _) -> ast
 
-parseIntOrParens  :: Parser Ast
+-- parse patterns like "(x)" or "123"
+parseIntOrParens :: Parser Ast
 parseIntOrParens = parseAstInt <|> parseParens
                      `mapParser` \ ast -> case ast of
                                             Left a  -> a
                                             Right a -> a
 
+-- parse everything
 parser :: Parser Ast
-parser =  parseIntOrParens +++ pluses `mapParser` combinePlus
+parser = parseIntOrParens +++ pluses `mapParser` combinePlus
 
 -- could be a fold
 combinePlus :: (Ast, [Ast]) -> Ast

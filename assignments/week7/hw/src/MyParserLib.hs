@@ -7,6 +7,7 @@ type Parser a = String -> Maybe (a, String)
 -- Note we will go over this in lab.  Don't look at this file before lab if you don't want to spoil the surprise
 
 
+-- parse one thing, if that works then parse the other thing
 (+++) :: Parser a -> Parser b -> Parser (a,b)
 (pa +++ pb) str = case (pa str) of
                     Nothing         -> Nothing
@@ -15,6 +16,8 @@ type Parser a = String -> Maybe (a, String)
                                          Just (b,restrest)  -> Just ((a, b),restrest)
 
 
+
+-- parse exactly a string, return that string
 literal :: String -> Parser String
 literal ""    input = Just ("", input)
 literal (h:t) ""    = Nothing
@@ -35,6 +38,7 @@ simpleParser = (literal "abc") +++ (literal "def")
 
 
 
+-- parse an integer
 intParser :: Parser Integer
 intParser ""    = Nothing
 intParser (h:t) = if isDigit h
@@ -67,16 +71,17 @@ floatParser' = intParser +++ (literal ".") +++ (intParserHelper 0)
 -- Just (((1234,"."),5678)," and then some stufff")
 
 
-
+-- change the output of an existing parser
 mapParser :: Parser a -> (a->b) -> Parser b
 mapParser pa f input = case pa input of
                    Nothing         -> Nothing
                    Just (a, rest)  -> Just (f a, rest)
 
--- think, could Parsers be functors?
+
+-- think, could Parsers be functors?  Do they obay the functor laws?  Do they fit any other abstractions?
 
 
--- give
+-- a bugggy implementation for demo perposes
 numDigits:: Integer -> Integer
 numDigits n = if n <= 9
               then 1
@@ -114,25 +119,37 @@ floatOrInt  = floatParser <|> intParser
 -- note there is a bug in floatParser
 
 
+-- take a parser and parse as much as possible into a list
 rep :: Parser a -> Parser ([a])
 rep pa str = case (pa str) of
                Nothing        -> Just ([], str)
                Just (a, rest) -> (mapParser (rep pa) (\ ls -> a:ls)) rest
 
+numbers = rep (floatOrInt +++ literal ",")
+
+--parse spaces, throw them away
+spaces :: Parser ()
 spaces = (rep ((literal " ") <|> (literal ['\t']))) `mapParser` (\ _ -> ())
 
+-- eat the spaces before a parser
 eatS :: Parser a -> Parser a
 eatS pa = spaces +++ pa `mapParser` \ (_,a) -> a
+
+numbers' = rep (eatS floatOrInt +++ literal ",")
 
 --    *MyParserLib> eatSpaces "       and stuf"
 --    Just ((),"and stuf")
 
 --these will become helpful for parsing Lang 3 and 4
+
+-- parse a single letter
 letterParser :: Parser Char
 letterParser "" = Nothing
 letterParser (head:tail) = if isAlpha head
                            then Just (head, tail)
                            else Nothing
 
+
+-- parse what we will consider a good variable name (for now)
 varParser :: Parser String
 varParser = (letterParser +++ rep letterParser ) `mapParser` (\ (h, tail) -> h:tail)
