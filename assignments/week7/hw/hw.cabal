@@ -10,7 +10,7 @@ cabal-version:        >=1.10
 
 
 library
-  exposed-modules:    MonadProblems, Lang2Parser,  Lang1Parser, Lang3Parser, Lang0, Lang0Parser, Lang2, Lang4, MyParserLib, Lang4Parser, Lang1, Lang3
+  exposed-modules:    MyParserLib, MonadProblems, Lang2Parser,  Lang1Parser, Lang3Parser, Lang0, Lang0Parser, Lang2, Lang4, Lang4Parser, Lang1, Lang3
   ghc-options:        -fwarn-incomplete-patterns -fwarn-incomplete-uni-patterns
   build-depends:      containers, base >= 4.7 && < 5
   hs-source-dirs:     src, src/week5
