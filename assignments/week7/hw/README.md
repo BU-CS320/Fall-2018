@@ -2,16 +2,10 @@
 Lab and HW are combined this week.
 
 ## Setup
-Similar to [lab2](../../week2/lab2)
-1. Follow this [link](https://classroom.github.com/a/WMhS3bWk) to create an assignment repository
+Similar to [lab2](../../week2/lab2), Follow this [link](https://classroom.github.com/a/WMhS3bWk) to create an assignment repository
 
 ## Submit
 similar to [lab2](../../week2/lab2)
-1. run the tests by running ```cabal test```
-1. run ```git status``` to make sure everything is ok
-1. run ```git commit -a -m "done with another HW!"``` to make a commit on your laptop
-1. run ```git push``` to submit your work
-1. check that you can see your solutions on the website for your private repo
 
 ## REPL commands
  * ```:load x``` will load a different module
