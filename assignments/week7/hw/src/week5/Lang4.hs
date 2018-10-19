@@ -32,8 +32,8 @@ instance Show Ast where
   show (AstInt i)      = show i
   show (Plus x y)      = "("++ show x ++ "+" ++ show y ++ ")"
   show (Separator x y) = "("++ show x ++ ";" ++ show y ++ ")"
-  show (Let ident x y) = "(let "++ show ident ++ " = " ++ show x ++ " in " ++ show y ++ ")"
-  show (Id x )         = show x
+  show (Let ident x y) = "(let "++ ident ++ " = " ++ show x ++ " in " ++ show y ++ ")"
+  show (Id x )         = x
 
 
 
