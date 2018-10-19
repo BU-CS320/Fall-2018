@@ -35,6 +35,6 @@ instance Show Ast where
   show (AstInt i)      = show i
   show (Plus x y)      = "("++ show x ++ "+" ++ show y ++ ")"
   show (Separator x y) = "("++ show x ++ ";" ++ show y ++ ")"
-  show (Assign x y)    = "("++ show x ++ " = " ++ show y ++ ")"
+  show (Assign x y)    = "("++ x ++ " = " ++ show y ++ ")"
   show (Id x )         = x
 
