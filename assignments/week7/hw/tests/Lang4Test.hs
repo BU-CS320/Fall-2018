@@ -14,9 +14,9 @@ import Lang4Parser(unsafeParser, parser)
 unitTests =
   testGroup
     "Lang4Test"
-    [instructorTests
+    [instructorTests,
      -- TODO: your tests here
-    ]
+     parseShowTests]
 
 instructorTests = testGroup
       "instructorTests"
@@ -43,3 +43,20 @@ instructorTests = testGroup
 -- TODO: add a generator, every show should be parsable, test the Eq laws, tests from prevous languages and week 5, many many more examples
 -- TODO: you should always be able to parse show (when the var names aren't too bad)
 
+parseShowTests = testGroup
+      "parseShowTests"
+      [
+
+      testCase "test parsing show AstInt" $ assertEqual [] (Just ((AstInt 2), "")) $ (parser (show (AstInt 2))),
+
+      testCase "test parsing show Plus" $ assertEqual [] (Just ((Plus (AstInt 2) (AstInt 3)),"")) $ (parser (show (Plus (AstInt 2) (AstInt 3)))),
+      
+      testCase "test parsing show Separator" $ assertEqual [] (Just ((Separator (AstInt 2) (AstInt 3)),"")) $ (parser (show (Separator (AstInt 2) (AstInt 3)))),
+
+      testCase "test parsing show Id" $ assertEqual [] (Just ((Id "x"), "")) $ (parser (show (Id "x"))),
+
+      testCase "test parsing show Let" $ assertEqual [] (Just ((Let "x" (Plus (AstInt 3) (AstInt 2)) (Plus (Id "x") (Id "x"))),"")) $ (parser (show ((Let "x" (Plus (AstInt 3) (AstInt 2)) (Plus (Id "x") (Id "x")))))),
+
+      testCase "test eval parsing show Let" $ assertEqual [] (Just 10) $ eval empty (unsafeParser (show ((Let "x" (Plus (AstInt 3) (AstInt 2)) (Plus (Id "x") (Id "x"))))))
+      
+      ]

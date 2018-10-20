@@ -13,9 +13,9 @@ import Lang2Parser(unsafeParser, parser)
 unitTests =
   testGroup
     "Lang2Test"
-    [instructorTests
+    [instructorTests,
      -- TODO: your tests here
-    ]
+     parseShowTests]
 
 
 instructorTests = testGroup
@@ -30,3 +30,16 @@ instructorTests = testGroup
 -- TODO: add a generator, every show should be parsable, test the Eq laws, tests from lang0 and 1 and week 5, many many more examples
 -- TODO: you should always be able to parse show
 
+parseShowTests = testGroup
+      "parseShowTests"
+      [
+
+      testCase "test parsing show AstInt" $ assertEqual [] (Just ((AstInt 2), "")) $ (parser (show (AstInt 2))),
+
+      testCase "test parsing show Plus" $ assertEqual [] (Just ((Plus (AstInt 2) (AstInt 3)),"")) $ (parser (show (Plus (AstInt 2) (AstInt 3)))),
+      
+      testCase "test parsing show Separator" $ assertEqual [] (Just ((Separator (AstInt 2) (AstInt 3)),"")) $ (parser (show (Separator (AstInt 2) (AstInt 3)))),
+
+      testCase "test parsing show Print" $ assertEqual [] (Just ((Print (AstInt 2)), "")) $ (parser (show (Print (AstInt 2))))
+
+      ]
