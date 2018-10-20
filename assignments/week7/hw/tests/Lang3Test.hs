@@ -43,7 +43,6 @@ instructorTests = testGroup
 parseShowTests = testGroup
       "parseShowTests"
       [
-
       testCase "test parsing show AstInt" $ assertEqual [] (Just ((AstInt 2), "")) $ (parser (show (AstInt 2))),
 
       testCase "test parsing show Plus" $ assertEqual [] (Just ((Plus (AstInt 2) (AstInt 3)),"")) $ (parser (show (Plus (AstInt 2) (AstInt 3)))),
@@ -55,5 +54,4 @@ parseShowTests = testGroup
       testCase "test parsing show Assign" $ assertEqual [] (Just ((Assign "x" (Plus (AstInt 3) (AstInt 2))),"")) $ (parser (show (Assign "x" (Plus (AstInt 3) (AstInt 2))))),
    
       testCase "test eval parsing show Assign" $ assertEqual [] (Just 5) $ snd (eval empty (unsafeParser (show (Assign "x" (Plus (AstInt 3) (AstInt 2))))))
-
       ]
