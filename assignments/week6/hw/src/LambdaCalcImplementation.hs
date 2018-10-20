@@ -40,7 +40,7 @@ goodName env exp s =  findName (boundVars exp `Data.Set.union` keysSet env  `Dat
 -- rename a free var so it doesn't conflict with the other bindings, or the environment
 rename :: LambdaExpression -> String -> String -> LambdaExpression
 rename (App f a)      from to             = App (rename f from to) (rename a from to)
-rename (Lam v bod)    from to | v \= from = Lam v bod
+rename (Lam v bod)    from to | v /= from = Lam v bod
                               | otherwise = Lam to $ rename bod from to
 rename (Identifier v) from to | v == from = (Identifier to)
                               | otherwise = Identifier v
