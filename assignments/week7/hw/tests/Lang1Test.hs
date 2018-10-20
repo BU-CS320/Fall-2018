@@ -25,9 +25,9 @@ arbitrarySizedAst m | otherwise = do l <- arbitrarySizedAst (m `div` 2)
 unitTests =
   testGroup
     "Lang1Test"
-    [instructorTests
+    [instructorTests,
      -- TODO: your tests here
-	 ]
+     parseShowTests ]
 
 
 
@@ -58,4 +58,12 @@ instructorTests = testGroup
 
 -- TODO: test other Eq laws too, better descriptions, many many more examples
 
+parseShowTests = testGroup
+      "parseShowTests"
+      [
+      testCase "test parsing show AstInt" $ assertEqual [] (Just ((AstInt 2), "")) $ (parser (show (AstInt 2))),
 
+      testCase "test parsing show Plus" $ assertEqual [] (Just ((Plus (AstInt 2) (AstInt 3)),"")) $ (parser (show (Plus (AstInt 2) (AstInt 3)))),
+      
+      testCase "test parsing show Separator" $ assertEqual [] (Just ((Separator (AstInt 2) (AstInt 3)),"")) $ (parser (show (Separator (AstInt 2) (AstInt 3))))
+      ]
