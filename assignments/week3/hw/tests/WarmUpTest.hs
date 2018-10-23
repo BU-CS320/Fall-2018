@@ -8,4 +8,10 @@ import WarmUp(Crazier, example, isItNice)
 unitTests =
   testGroup
     "WarmUpTest"
-    []
+    [
+     ex1IsItNice
+    ]
+
+
+ex1IsItNice =
+    testCase "it is nice" $ assertBool [] $ (isItNice example) == True || (isItNice example) == False

@@ -17,10 +17,12 @@ main = defaultMain allTests
 allTests =
   testGroup
     "allTests"
-    [DataProblemsTest.unitTests,
-	 TypeProblemsTest.unitTests,
-	 SetTest.unitTests,
-	 BinarySearchTreesTest.unitTests,
-	 OutsideTest.unitTests,
-	 HigherOrderProblemsTest.unitTests,
-	 WarmUpTest.unitTests]
+    [
+     BinarySearchTreesTest.unitTests,
+     DataProblemsTest.unitTests,
+     HigherOrderProblemsTest.unitTests,
+     OutsideTest.unitTests,
+     SetTest.unitTests,
+     TypeProblemsTest.unitTests,
+     WarmUpTest.unitTests
+     ]
