@@ -55,9 +55,7 @@ intParserHelper :: Integer -> Parser Integer
 intParserHelper n ""    = Just (n, "")
 intParserHelper n (h:t) = if isDigit h
                           then let next = (read [h] :: Integer)
-                               in case intParserHelper (n*10 + next) t of
-                                    Nothing          -> Just (n, h:t)
-                                    Just (num, rest) -> Just (num, rest)
+                               in intParserHelper (n*10 + next) t
                           else Just (n, h:t)
 
 
