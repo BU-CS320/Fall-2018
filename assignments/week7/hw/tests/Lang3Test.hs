@@ -33,8 +33,9 @@ instructorTests = testGroup
       testCase "parse test  on different states" $ assertBool []  $ snd (eval empty  (unsafeParser " x = 3 + x "))
                                                       /=
                                                       snd (eval (fromList [("x",3)]) (unsafeParser " x = 3 + x ")),
-      testCase "parse test  (x = 3) + x + ((x = 4) + x) " $ assertEqual [] (Just 14) $ snd (eval empty  (unsafeParser " (x = 3) + x + ((x = 4) + x) ") ) ,
-      testCase "parse test  x = (3+5) ; y = x+x; x+y+7 " $ assertEqual [] (Just (Assign "x" (Separator (Plus (AstInt 3) (AstInt 5)) (Assign "y" (Separator (Plus (Id "x") (Id "x")) (Plus (Id "x") (Plus (Id "y") (AstInt 7)))))), "")) $ parser " x = (3+5) ; y = x+x; x+y+7"
+      testCase "parse test  (x = 3) + x + ((x = 4) + x) " $ assertEqual [] (Just 14) $ snd (eval empty  (unsafeParser " (x = 3) + x + ((x = 4) + x) ") ) --,
+-- test case removed because it assumed a less than ideal answer (see https://piazza.com/class/jlpaiu7tfht5ro?cid=486), either should get full credit
+--       testCase "parse test  x = (3+5) ; y = x+x; x+y+7 " $ assertEqual [] (Just (Assign "x" (Separator (Plus (AstInt 3) (AstInt 5)) (Assign "y" (Separator (Plus (Id "x") (Id "x")) (Plus (Id "x") (Plus (Id "y") (AstInt 7)))))), "")) $ parser " x = (3+5) ; y = x+x; x+y+7"
       ]
 
 -- TODO: add a generator, every show should be parsable, test the Eq laws, tests from lang0 and 1 and week 5, many many more examples
