@@ -1,5 +1,5 @@
 module ExceptionMonad where
-import Control.Monad       (liftM, ap)
+import Control.Monad(ap)
 
 data Unsafe a = Error String | Ok a deriving (Show, Eq)
 
