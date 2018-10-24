@@ -18,6 +18,8 @@ instance Functor Parser where
 -- hint:  pa :: String -> Maybe (a, String)
 -- hint:  similar to State monad
 
+-- think, "does it follow the Functor laws?"
+
 --ignore this for now
 instance Applicative Parser where
   pure = return
@@ -29,7 +31,13 @@ instance Monad Parser where
 
   --(>>=) :: Parser a -> (a -> Parser b) -> Parser b
   (Parser pa) >>= f  = undefined
+-- hints:
+-- pa :: String -> Maybe (a, String)
+-- f :: ( a -> Parser b)
+-- (f a) :: Parser b
+-- parse (f a) :: String -> Maybe (b, String)
 
+-- think, "does it follow the Monad laws?"
 
 
 
@@ -102,9 +110,9 @@ parserA <|> parserB = Parser $ \ input ->  case parse parserA input of
 
 -- take a parser and parse as much as possible into a list, always parse at least 1 thing, (from book)
 some :: Parser a -> Parser ([a])
-some pa =  do a <- pa
-              rest <- rep pa
-              return (a:rest)
+some pa = do a <- pa
+             rest <- rep pa
+             return (a:rest)
 
 -- for example:
 -- *ParserMonad> parse (some (literal "blahh")) "blahhhhhh"
