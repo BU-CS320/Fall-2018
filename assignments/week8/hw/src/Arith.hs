@@ -30,7 +30,7 @@ instance Show Arith where
   show _ = undefined
 
 
--- structural equalitiy on your AST "2 + 2 /= 4" but "2*3 + 4*5" == "(2*3) + (4*5)"
+-- structural equality on your AST "2 + 2 /= 4" but "2*3 + 4*5" == "(2*3) + (4*5)"
 -- mostly for testing
 instance Eq Arith where
   _ == _ = undefined
