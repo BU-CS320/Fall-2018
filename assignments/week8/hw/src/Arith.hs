@@ -22,8 +22,12 @@ data Arith -- = Put your constructors here
 eval :: Arith -> Unsafe Rational
 eval = undefined
 
-parse :: Parser Arith
-parse = undefined
+parser :: Parser Arith
+parser = undefined
+
+-- a helper function
+-- parseArith :: String -> Maybe Arith
+-- parseArith s = fmap fst $ parse parser s
 
 -- a human readable string
 instance Show Arith where
