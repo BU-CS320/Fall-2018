@@ -1,5 +1,5 @@
 module StateMonad where
-import Control.Monad       (liftM, ap)
+import Control.Monad(ap)
 
 -- notice how we handled state in https://github.com/BU-CS320/Fall-2018/blob/master/assignments/week7/hw/src/week5/Lang4.hs
 -- we can make a monadic type to handle the details for us
