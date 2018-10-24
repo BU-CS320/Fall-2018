@@ -14,7 +14,7 @@ parse (Parser f) = f
 
 instance Functor Parser where
   -- fmap :: (a -> b) -> Parser a -> Parser b
-  fmap f (Parser pa) =  undefined
+  fmap f (Parser pa) = undefined
 -- hint:  pa :: String -> Maybe (a, String)
 -- hint:  similar to State monad
 
@@ -27,15 +27,13 @@ instance Applicative Parser where
 
 instance Monad Parser where
   --return :: a -> Parser a
-  return a =  undefined
+  return a = undefined
 
   --(>>=) :: Parser a -> (a -> Parser b) -> Parser b
-  (Parser pa) >>= f  = undefined
+  (Parser pa) >>= f = undefined
 -- hints:
 -- pa :: String -> Maybe (a, String)
--- f :: ( a -> Parser b)
--- (f a) :: Parser b
--- parse (f a) :: String -> Maybe (b, String)
+-- f :: a -> Parser b
 
 -- think, "does it follow the Monad laws?"
 
@@ -67,8 +65,8 @@ sat p = do c <- item
 -- parse exactly a string, return that string (in book as the poorly named "string")
 literal :: String -> Parser String
 literal "" = return ""
-literal (h:t) = do c <- sat (==h)
-                   rest <- literal t
+literal (h:t) = do sat (==h)
+                   literal t
                    return (h:t)
 
 -- for example:
