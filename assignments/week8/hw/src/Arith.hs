@@ -3,7 +3,7 @@ module Arith where
 import ExceptionMonad
 import ParserMonad
 
--- hint read about the Rational type
+-- hint: read about the Rational type, fromIntegral might be helpful
 
 -- write a full arithmetic language, it must have a nice show, eval and parser
 
