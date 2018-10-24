@@ -6,6 +6,7 @@ data Unsafe a = Error String | Ok a deriving (Show, Eq)
 instance Functor Unsafe where
   -- fmap :: (a -> b) -> Unsafe a -> Unsafe b
   fmap f _ =  undefined
+  -- hint: f :: a -> b
 
 --ignore this for now
 instance Applicative Unsafe where
@@ -18,6 +19,7 @@ instance Monad Unsafe where
 
   --(>>=) :: Unsafe a -> (a -> Unsafe b) -> Unsafe b
   _ >>= f  =  undefined
+  -- hint: f :: a -> Unsafe b
 
 
 
