@@ -25,7 +25,7 @@ test-suite test
   hs-source-dirs:
     tests
   main-is: Main.hs
-  other-modules: MonadProblemsTest, Lang0Test, Lang1Test, Lang2Test, Lang3Test, Lang4Test
+  other-modules: ArithTest,ExceptionMonadTest,Lang3Test,ParserMonadTest
   build-depends:
       containers, base >= 4.7 && < 5
     , tasty >= 0.11.1, tasty-hunit, tasty-quickcheck

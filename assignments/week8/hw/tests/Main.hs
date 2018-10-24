@@ -2,6 +2,10 @@ module Main where
 
 import Test.Tasty
 
+import ArithTest
+import ExceptionMonadTest
+import Lang3Test
+import ParserMonadTest
 
 main = defaultMain testSuite
 
@@ -11,5 +15,8 @@ testSuite =
   testGroup
     "allTests"
     [
-    --TODO
+        ArithTest.unitTests,
+        ExceptionMonadTest.unitTests,
+        Lang3Test.unitTests,
+        ParserMonadTest.unitTests
     ]
