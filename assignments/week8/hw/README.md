@@ -23,7 +23,8 @@ similar to [lab2](../../week2/lab2)
  * it is best to pull in form the upstream after you have committed and pushed to your private repo.
 
 ## Notes
-added some more words and tests after the first lab.
+### 9:05 am
+convinced me that it was to hard and I should give more solutions
    
 
 
