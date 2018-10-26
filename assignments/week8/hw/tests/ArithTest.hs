@@ -46,5 +46,7 @@ somemoreTests = testGroup
 
         testCase "Arith AST structral inequality" $ assertBool [] ((parse parser "6") /= (parse parser "(2*3)")),
         
-        testCase "Arith AST structral equality" $ assertBool [] ((parse parser "2*3 + 4*5") == (parse parser "(2*3) + (4*5)"))
+        testCase "Arith AST structral equality" $ assertBool [] ((parse parser "2*3 + 4*5") == (parse parser "(2*3) + (4*5)")),
+
+        testCase "Arith AST structral inequality" $ assertBool [] ((parse parser "(1+2) * (2+1)") /= (parse parser "1 + 2 * 2 + 1"))
       ]
