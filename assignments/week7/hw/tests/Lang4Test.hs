@@ -26,10 +26,10 @@ instructorTests = testGroup
       testCase "example eval" $ assertEqual []  (Just 5) $ eval empty (Let "x" (AstInt 3)
                                                                           ((Let "x" (AstInt 1)
                                                                            ((Id "x") `Plus` (Id "x")))  `Plus` (Id "x")) ),
-
-      testCase "parse test: let x= 3+3 in x; (let y = x + 7 in x + y)+x" $ assertEqual []
-                                              (Just (Let "x" (Plus (AstInt 3) (AstInt 3)) (Separator (Id "x") (Plus (Let "y" (Plus (Id "x") (AstInt 7)) (Plus (Id "x") (Id "y"))) (Id "x"))),"")) $
-                                             parser "let x= 3+3 in x; (let y = x + 7 in x + y)+x",
+-- see https://piazza.com/class/jlpaiu7tfht5ro?cid=490
+--       testCase "parse test: let x= 3+3 in x; (let y = x + 7 in x + y)+x" $ assertEqual []
+--                                               (Just (Let "x" (Plus (AstInt 3) (AstInt 3)) (Separator (Id "x") (Plus (Let "y" (Plus (Id "x") (AstInt 7)) (Plus (Id "x") (Id "y"))) (Id "x"))),"")) $
+--                                              parser "let x= 3+3 in x; (let y = x + 7 in x + y)+x",
 
       testCase "parse test: let x = 3 in x+x" $ assertEqual []
                                              (Just 6) $
