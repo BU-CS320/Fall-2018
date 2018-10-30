@@ -26,11 +26,12 @@ instructorTests = testGroup
         shouldEvalToNum "" 15 "1 + (2 + 3) + ((4) + 5)",
         shouldEvalToNum "" 24 "2 * 4 * 3",
         shouldEvalToNum "" 6 "12 / 2 ",
-        shouldEvalToNum "" 21212 "22222 - 10 - 1000"
+        shouldEvalToNum "" 21212 "22222 - 10 - 1000",
+        shouldEvalToNum "" 16 "128 / 4 / 2"
       ]
 
 -- TODO: your tests here!!!
--- TODO: test structural equality on your AST "2 + 2 /= 4" but "2*3 + 4*5" == "(2*3) + (4*5)"
+-- TODO: test structural equality on your AST "2 + 2 /= 4"
 -- TODO: every simple thing parses and evals
 -- TODO: division by 0 gives an error, errors propagate correctly
 -- TODO: many many examples
