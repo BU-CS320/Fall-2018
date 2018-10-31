@@ -31,5 +31,6 @@ instructorTests = testGroup
 
 -- TODO: your tests here!!!
 -- TODO: Many, many more example test cases (every simple thing, many normal things, some extreame things)
+-- TODO: test "(x=3);(x+x)" goes to 6
 -- TODO: add a generator, can then test more advanced language properties
 -- TODO: you should always be able to parse show (when the var names aren't too bad)
