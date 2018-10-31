@@ -4,11 +4,23 @@ import Data.Map(Map, lookup, insert, empty, fromList)  -- for State
 
 import Test.Tasty (testGroup)
 import Test.Tasty.HUnit (assertEqual, assertBool, testCase)
-import Test.Tasty.QuickCheck (testProperty,Arbitrary, oneof,arbitrary )
+import Test.Tasty.QuickCheck
 
 import Lang4(Ast(AstInt,Plus,Separator,Let,Id), eval)
 import Lang4Parser(unsafeParser, parser)
 
+-- note: probly could be better
+instance Arbitrary Ast where
+    arbitrary = sized arbitrarySizedAst
+
+arbitrarySizedAst ::  Int -> Gen Ast
+arbitrarySizedAst m | m < 1     = do i <- arbitrary
+                                     return $ AstInt i
+arbitrarySizedAst m | otherwise = do l <- arbitrarySizedAst (m `div` 2)
+                                     r <- arbitrarySizedAst (m `div` 2)
+                                     str <- elements ["x","y","z"]
+                                     node <- elements [Plus l r, Separator l r, Id str, Let str l r ]
+                                     return node
 
 
 unitTests =
@@ -37,8 +49,10 @@ instructorTests = testGroup
 
       testCase "parse test:  let x = 3 in (let x= 1 in x+x) + x" $ assertEqual []
                                              (Just 5) $
-                                              eval empty  (unsafeParser " let x = 3 in (let x= 1 in x+x) + x")
-      ]
+                                              eval empty  (unsafeParser " let x = 3 in (let x= 1 in x+x) + x"),
+
+      testProperty "show should match parse" $ ((\ x -> Just (x , "") == (parser $ show x)) :: Ast -> Bool)]
+
 
 -- TODO: add a generator, every show should be parsable, test the Eq laws, tests from prevous languages and week 5, many many more examples
 -- TODO: you should always be able to parse show (when the var names aren't too bad)
