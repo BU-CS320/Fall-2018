@@ -145,7 +145,7 @@ digit = sat isDigit
 
 -- parse natural numbers, like "123", or "000230000"
 natParser :: Parser Integer
-natParser =  do digits <- rep digit
+natParser =  do digits <- some digit
                 return $ read digits
 
 -- for example:
