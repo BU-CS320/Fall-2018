@@ -4,16 +4,21 @@ import Data.Char
 
 import Test.Tasty (testGroup)
 import Test.Tasty.HUnit (assertEqual, assertBool, testCase)
-import Test.Tasty.QuickCheck (testProperty,Arbitrary, oneof,arbitrary )
+import Test.Tasty.QuickCheck (testProperty,Arbitrary,Gen, oneof,arbitrary, sized )
 
 import Lang0(Ast(AstInt,Plus), eval)
 
 -- if some hero wants to write these for all data, I'm sure the class will appreciate it! (it will be a real challenge for the next 2 weeks)
 instance Arbitrary Ast where
-    arbitrary = oneof
-        [ arbitrary >>= \ i -> return $ AstInt i,
-		  arbitrary >>= \ l -> arbitrary >>= \ r -> return $ Plus l r
-        ]
+    arbitrary = sized arbitrarySizedAst
+
+arbitrarySizedAst ::  Int -> Gen Ast
+arbitrarySizedAst m | m < 1     = do i <- arbitrary
+                                     return $ AstInt i
+arbitrarySizedAst m | otherwise = do l <- arbitrarySizedAst (m `div` 2)
+                                     r <- arbitrarySizedAst (m `div` 2)
+                                     return $ Plus l r
+
 
 
 unitTests =

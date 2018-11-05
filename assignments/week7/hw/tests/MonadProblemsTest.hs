@@ -23,3 +23,4 @@ instructorTests = testGroup
       ]
 
 -- TODO: test that equality is correctly defined for "return aNum", aNum aFunc, ...
+-- for instance: not ! (return aNum) /= (return aNum)
