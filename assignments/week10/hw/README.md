@@ -32,7 +32,7 @@ you can choose your own error messages as long as they are reasonable.
 
 
 ## Setup
-Similar to [lab2](../../week2/lab2), Follow this [link](https://classroom.github.com/a/ogFzapTs) to create an assignment repository
+Similar to [lab2](../../week2/lab2), Follow this [link](https://classroom.github.com/a/IbYXBcl2) to create an assignment repository
 
 ## Submit
 similar to [lab2](../../week2/lab2)
