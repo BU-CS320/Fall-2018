@@ -42,7 +42,8 @@ instructorTests = testGroup
          assertVal "" (And (ValBool True) (ValBool False)) (B False),
          assertErr "" (And (ValBool True) (ValInt 3)),
          assertVal "" (((Lam "x" (Lam "y" ( (Var "x") `Plus` (Var "y")))) `App` (ValInt 7)) `App` (ValInt 4)) (I 11),
-         assertVal "" (let x = Var "x" in  (Lam "x" ( x `Plus` x)) `App` (ValInt 7) ) (I 14)
+         assertVal "" (let x = Var "x" in  (Lam "x" ( x `Plus` x)) `App` (ValInt 7) ) (I 14),
+         assertVal "singleton list" (Cons (ValInt 2) Nil) (Ls [I 2])
       ]
 
 -- TODO: your tests here!!!
