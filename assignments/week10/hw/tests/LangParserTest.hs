@@ -17,6 +17,8 @@ import LangParser
 
 instance Arbitrary Ast where
     arbitrary = sized arbitrarySizedAst
+-- TODO: implement shrink for better error messages
+-- see http://hackage.haskell.org/package/QuickCheck-2.12.6.1/docs/Test-QuickCheck-Arbitrary.html#v:shrink
 
 arbitrarySizedAst ::  Int -> Gen Ast
 arbitrarySizedAst m | m < 1 = do i <- arbitrary
