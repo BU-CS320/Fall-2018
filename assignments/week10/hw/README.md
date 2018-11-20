@@ -1,4 +1,10 @@
-# HW Due 10/27 (tentative)
+# HW Due 10/27
+
+## Before
+Watch the short [video](https://youtu.be/QUBUPId5WRQ) that walks through this HW.
+
+## Setup
+Similar to [lab2](../../week2/lab2), Follow this [link](https://classroom.github.com/a/IbYXBcl2) to create an assignment repository
 
 This week we will write our largest language so far.  It is a functional language that has Bools, Integers, and Lists.
 * You will need to write the monadic plumbing in EnvUnsafe.hs
@@ -31,9 +37,6 @@ Ok (I 11)
 you can choose your own error messages as long as they are reasonable.
 
 
-## Setup
-Similar to [lab2](../../week2/lab2), Follow this [link](https://classroom.github.com/a/IbYXBcl2) to create an assignment repository
-
 ## Submit
 similar to [lab2](../../week2/lab2)
 
@@ -47,8 +50,8 @@ similar to [lab2](../../week2/lab2)
  * it is best to pull in form the upstream after you have committed and pushed to your private repo.
 
 ## Notes
-some more tests will be added, but you will be graded on at least some hidden tests, so please test thoroughly
-
+added a video and some tests.
+But you will be graded on at least some hidden tests, so please test thoroughly.
 
 
 ## REPL commands
