@@ -31,9 +31,9 @@ assertErr s ast =  testCase (s ++  ": should be an error " ++ (show ast)) $ asse
 unitTests =
   testGroup
     "LangTest"
-    [instructorTests
+    [instructorTests,
      -- TODO: your tests here!!!
-	 ]
+     somemoreTests ]
 
 instructorTests = testGroup
       "instructorTests"
@@ -53,3 +53,14 @@ instructorTests = testGroup
 -- TODO: test functions returned behave correctly
 -- TODO: some really long example
 -- TODO: clean up the custom asserts (handle empty s better)
+
+somemoreTests = testGroup
+      "somemoreTests"
+      [
+         assertErr "cannot divide by 0" (Div (ValInt 2) (ValInt 0)),
+         assertVal "test or, not" (Or (ValBool True) (Not (ValBool False))) (B True),
+         assertVal "test let" (Let "x" (ValInt 7) (Plus (Var "x") (Var "x"))) (I 14),
+         assertVal "empty list" (Cons Nil Nil) (Ls []),
+         assertVal "test and, not, if, app" ((If (And (ValBool True) (Not (ValBool False))) (App (Lam "x" (Mult (Var "x") (Var "x"))) (ValInt 2)) (ValInt 5))) (I 4),
+         assertVal "test and, not, if, app" ((If (And (ValBool False) (Not (ValBool False))) (App (Lam "x" (Mult (Var "x") (Var "x"))) (ValInt 2))(ValInt 5))) (I 5)
+      ]
