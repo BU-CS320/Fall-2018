@@ -50,9 +50,9 @@ arbitrarySizedIf m = do b <- arbitrarySizedAst (m `div` 3)
 unitTests =
   testGroup
     "LangParserTest"
-    [instructorTests
+    [instructorTests,
      -- TODO: your tests here!!!
-	 ]
+     somemoreTests]
 
 instructorTests = testGroup
       "instructorTests"
@@ -64,3 +64,12 @@ instructorTests = testGroup
 
 -- TODO: your tests here!!!
 -- TODO: Many, many more example test cases (every simple thing, many normal things, some extreme things)
+
+somemoreTests = testGroup
+      "somemoreTests"
+      [
+        testCase "bool precedence test" $ assertEqual [] (Just((And (Not (ValBool False)) (ValBool True)), "")) $ (parse parser "! false && true"),
+        testCase "parens and bool precedence test" $ assertEqual [] (Just((Not (And (ValBool False) (ValBool True))), "")) $ (parse parser "! (false && true)"),
+        testCase "cons right associativity test" $ assertEqual [] (Just((Cons (ValInt 1) (Cons (ValInt 4) (Plus (ValInt 3) (ValInt 5)))), "")) $ (parse parser "1 : 4 : 3 + 5"),
+        testCase "cons different types test" $ assertEqual [] (Just((Cons (ValInt 1) (Cons (ValInt 4) (ValBool True))), "")) $ (parse parser "1 : 4 : true")
+      ]

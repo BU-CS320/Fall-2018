@@ -31,18 +31,18 @@ assertErr s ast =  testCase (s ++  ": should be an error " ++ (show ast)) $ asse
 unitTests =
   testGroup
     "LangTest"
-    [instructorTests
+    [instructorTests,
      -- TODO: your tests here!!!
-	 ]
+     somemoreTests ]
 
 instructorTests = testGroup
       "instructorTests"
       [
-         assertVal "" (Plus (ValInt 2) (ValInt 3)) (I 5),
-         assertVal "" (And (ValBool True) (ValBool False)) (B False),
-         assertErr "" (And (ValBool True) (ValInt 3)),
-         assertVal "" (((Lam "x" (Lam "y" ( (Var "x") `Plus` (Var "y")))) `App` (ValInt 7)) `App` (ValInt 4)) (I 11),
-         assertVal "" (let x = Var "x" in  (Lam "x" ( x `Plus` x)) `App` (ValInt 7) ) (I 14),
+         assertVal "plus test, 2+3=5" (Plus (ValInt 2) (ValInt 3)) (I 5),
+         assertVal "and test, true && false = false" (And (ValBool True) (ValBool False)) (B False),
+         assertErr "and test, type error" (And (ValBool True) (ValInt 3)),
+         assertVal "app test, x+y=11" (((Lam "x" (Lam "y" ( (Var "x") `Plus` (Var "y")))) `App` (ValInt 7)) `App` (ValInt 4)) (I 11),
+         assertVal "app test, x+x=14" (let x = Var "x" in  (Lam "x" ( x `Plus` x)) `App` (ValInt 7) ) (I 14),
          assertVal "singleton list" (Cons (ValInt 2) Nil) (Ls [I 2])
       ]
 
@@ -53,3 +53,15 @@ instructorTests = testGroup
 -- TODO: test functions returned behave correctly
 -- TODO: some really long example
 -- TODO: clean up the custom asserts (handle empty s better)
+
+somemoreTests = testGroup
+      "somemoreTests"
+      [
+         assertErr "cannot divide by 0" (Div (ValInt 2) (ValInt 0)),
+         assertVal "test or, not" (Or (ValBool True) (Not (ValBool False))) (B True),
+         assertVal "test let" (Let "x" (ValInt 7) (Plus (Var "x") (Var "x"))) (I 14),
+         assertVal "empty list" (Cons Nil Nil) (Ls []),
+         assertVal "non-empty list" (Cons (ValInt 2) (Cons (ValInt 1) (ValBool True))) (Ls [(I 2), (I 1), (B True)]),
+         assertVal "test and, not, if, app" ((If (And (ValBool True) (Not (ValBool False))) (App (Lam "x" (Mult (Var "x") (Var "x"))) (ValInt 2)) (ValInt 5))) (I 4),
+         assertVal "test and, not, if, app" ((If (And (ValBool False) (Not (ValBool False))) (App (Lam "x" (Mult (Var "x") (Var "x"))) (ValInt 2))(ValInt 5))) (I 5)
+      ]
