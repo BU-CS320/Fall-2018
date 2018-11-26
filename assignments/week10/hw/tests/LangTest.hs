@@ -60,7 +60,7 @@ somemoreTests = testGroup
          assertErr "cannot divide by 0" (Div (ValInt 2) (ValInt 0)),
          assertVal "test or, not" (Or (ValBool True) (Not (ValBool False))) (B True),
          assertVal "test let" (Let "x" (ValInt 7) (Plus (Var "x") (Var "x"))) (I 14),
-         assertVal "empty list" (Cons Nil Nil) (Ls []),
+         assertVal "list of empty list" (Cons Nil Nil) (Ls [Ls []]),
          assertVal "non-empty list" (Cons (ValInt 2) (Cons (ValInt 1) (Cons (ValBool True) Nil))) (Ls [(I 2), (I 1), (B True)]),
          assertVal "test and, not, if, app" ((If (And (ValBool True) (Not (ValBool False))) (App (Lam "x" (Mult (Var "x") (Var "x"))) (ValInt 2)) (ValInt 5))) (I 4),
          assertVal "test and, not, if, app" ((If (And (ValBool False) (Not (ValBool False))) (App (Lam "x" (Mult (Var "x") (Var "x"))) (ValInt 2))(ValInt 5))) (I 5)
