@@ -1,4 +1,4 @@
-# HW Due 10/27
+# HW Due 11/27
 
 ## Before
 Watch the short [video](https://youtu.be/QUBUPId5WRQ) that walks through this HW.
