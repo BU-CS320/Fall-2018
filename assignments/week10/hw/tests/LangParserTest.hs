@@ -70,6 +70,6 @@ somemoreTests = testGroup
       [
         testCase "bool precedence test" $ assertEqual [] (Just((And (Not (ValBool False)) (ValBool True)), "")) $ (parse parser "! false && true"),
         testCase "parens and bool precedence test" $ assertEqual [] (Just((Not (And (ValBool False) (ValBool True))), "")) $ (parse parser "! (false && true)"),
-        testCase "cons right associativity test" $ assertEqual [] (Just((Cons (ValInt 1) (Cons (ValInt 4) (Plus (ValInt 3) (ValInt 5)))), "")) $ (parse parser "1 : 4 : 3 + 5"),
-        testCase "cons different types test" $ assertEqual [] (Just((Cons (ValInt 1) (Cons (ValInt 4) (ValBool True))), "")) $ (parse parser "1 : 4 : true")
+        testCase "cons right associativity test" $ assertEqual [] (Just (Cons (ValInt 1) (Cons (ValInt 4) (Cons (Plus (ValInt 3) (ValInt 5)) Nil)),"")) $ (parse parser "1 : 4 : 3 + 5"),
+        testCase "cons different types test" $ assertEqual [] (Just (Cons (ValInt 1) (Cons (ValInt 4) (Cons (ValBool True) Nil)),"")) $ (parse parser "1 : 4 : true")
       ]
