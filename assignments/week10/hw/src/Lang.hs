@@ -113,7 +113,7 @@ fullyParenthesized Nil = "( [] )"
 
 showPar :: Bool -> String -> String
 showPar True s = "(" ++ s ++ ")"
-showPar false s =  s
+showPar False s =  s
 
 
 -- provide a nice show with minimal parentheses, for testing an documentation
