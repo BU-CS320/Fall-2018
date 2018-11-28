@@ -10,6 +10,7 @@ unitTests =
   testGroup
     "ParserMonadTest"
     [instructorTests
+    ,ourTests
      -- TODO: your tests here
 	 ]
 
@@ -20,6 +21,10 @@ instructorTests = testGroup
        testCase "varParser test" $ assertEqual []  (Just ("abc","")) $ parse varParser "abc"
       ]
 
+ourTests = testGroup
+      "ourTests"
+      [testCase "+++ test" $ assertEqual [] (Just ("a12", "")) (parse varParser "a12")
+      ]
 
 -- TODO: your tests here!!!
 -- TODO: Lots of tests for all the laws!
