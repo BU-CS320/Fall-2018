@@ -11,7 +11,7 @@ data Nat : Set where
   succ : Nat -> Nat
 
 three : Nat 
-three = {!!}
+three = succ (succ (succ zero))
 
 -- we can aslo define
 
@@ -35,7 +35,7 @@ five = {!!}
 
 
 -- ok that's a pain
--- {-# BUILTIN NATURAL Nat    #-}
+{-# BUILTIN NATURAL Nat    #-}
 
 
 
@@ -52,7 +52,12 @@ five = {!!}
 -- to pattern match: C-c C-c
 -- "refine" a hole: C-c C-r
 _+_ : Nat -> Nat -> Nat
-l + r = {!!}
+zero + r = r
+succ l + r = l + (succ r)
+
+
+
+
 
 
 -- to run function: C-c C-n
@@ -65,21 +70,33 @@ data GTE  : Nat ->  Nat -> Set where
  greaterThanByOne : (a : Nat) -> (b : Nat) -> GTE a b -> GTE (succ a) b
 
 -- C-c C-a or C-c C-r
-proof3>=0 : GTE three (succ zero)
-proof3>=0 = {!!}
+proof3>=1 : GTE 3 1
+proof3>=1 = greaterThanByOne (succ (succ zero)) (succ zero) (greaterThanByOne (succ zero) (succ zero) (eqItself (succ zero)))
 
+proof3>=1' : GTE 3 1
+proof3>=1' = greaterThanByOne (succ (succ zero)) (succ zero)
+               (greaterThanByOne (succ zero) (succ zero) (eqItself (succ zero)))
 
 proofAllNatsGTEZero : (n : Nat) -> GTE n zero
-proofAllNatsGTEZero n = {!!}
+proofAllNatsGTEZero zero = eqItself zero
+proofAllNatsGTEZero (succ n) = greaterThanByOne n zero (proofAllNatsGTEZero n)
 
 
-gteSucc : (n : Nat) -> (m : Nat) ->  GTE n m -> GTE (succ n) (succ m)
-gteSucc n m n>=m = {!!}
 
 
 
 transitive : (a : Nat) -> (b : Nat) -> (c : Nat) -> (GTE a b) -> (GTE b c) -> (GTE a c)
-transitive a b c a>=b b>=c = {!!}
+transitive .0 zero c (eqItself .0) b>=c = b>=c
+transitive .(succ a) zero c (greaterThanByOne a .0 a>=b) b>=c = greaterThanByOne a c (transitive a zero c a>=b b>=c)
+transitive .(succ b) (succ b) c (eqItself .(succ b)) b>=c = b>=c
+transitive .(succ a) (succ b) c (greaterThanByOne a .(succ b) a>=b) b>=c = greaterThanByOne a c (transitive a (succ b) c a>=b b>=c)
+
+
+gteSucc : (n : Nat) -> (m : Nat) ->  GTE n m -> GTE (succ n) (succ m)
+gteSucc .0 zero (eqItself .0) = eqItself (succ zero)
+gteSucc .(succ a) zero (greaterThanByOne a .0 n>=m) = greaterThanByOne (succ a) (succ zero) (gteSucc a zero n>=m)
+gteSucc .(succ m) (succ m) (eqItself .(succ m)) = eqItself (succ (succ m))
+gteSucc .(succ a) (succ m) (greaterThanByOne a .(succ m) n>=m) = greaterThanByOne (succ a) (succ (succ m)) (gteSucc a (succ m) n>=m)
 
 
 -- bigger example
@@ -113,9 +130,10 @@ insert n (Cons m ls) | False  = (Cons n  (Cons m ls))
 
 
 sort : List Nat -> List Nat
-sort ls = {!!}
+sort Nil = Nil
+sort (Cons a ls) = insert a (sort ls)
 
--- sortTest = sort (Cons 3 (Cons 1 (Cons 5 Nil)))
+sortTest = sort (Cons 3 (Cons 1 (Cons 5 Nil)))
 
 
 
@@ -136,8 +154,8 @@ data Sorted : (List Nat) -> Set where
 
 
 
--- sortWorks :  (ls : List Nat)  -> Sorted (sort ls)
--- sortWorks = {!!} -- this is posible to prove like this https://gist.github.com/aztek/92e6d47bde0d128bcb9d
+sortWorks :  (ls : List Nat)  -> Sorted (sort ls)
+sortWorks = {!!} -- this is posible to prove like this https://gist.github.com/aztek/92e6d47bde0d128bcb9d
 
 
 
@@ -189,10 +207,13 @@ isGTE' (succ n) (succ m) | Right x = Right (gteSucc m n x)
 
 
 insert' : (n : Nat) -> (ls : List Nat) -> Sorted ls ->  Σ ( List Nat) (\ ls' -> (Sorted ls')  × ( (x : Nat) -> GTE n x -> lBound x ls -> lBound x ls'))
-insert' n ls pr = {!!}
+insert' n Nil pr = (Cons n Nil) , < (notEmpty n Nil pr emptyGood) , (λ x → hasThings n Nil) >
+insert' n (Cons m ls) isSorted with isGTE' n m
+insert' n (Cons m ls) (notEmpty .m .ls isSorted m<=ls) | Right m>=n = ( (Cons n  (Cons m ls))) , < (notEmpty n (Cons m ls) (notEmpty m ls isSorted m<=ls) (hasThings m ls m>=n (extendB n m ls m>=n m<=ls))) , (λ x → hasThings n (Cons m ls)) >
+insert' n (Cons m ls) (notEmpty .m .ls isSorted m<=ls) | Left x = {!!}
 
 
-sort' :  (ls : List Nat) ->  Σ ( List Nat) (\ ls' -> (Sorted ls') )
+sort' :  (ls : List Nat) ->  Σ ( List Nat) Sorted 
 sort' Nil = Nil , isEmpty
 sort' (Cons n  ls) with sort' ls
 sort' (Cons n _) | ls , proof with insert' n ls  proof
