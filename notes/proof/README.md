@@ -3,7 +3,7 @@
 Proofs have the potential to make programing easier.
 However, some combination of automation, user interface, theory, and informal convincing needs to happen first
 
-If you have questions, or are interested in working on this. Drop me an email, or stop by my office hours.
+If you have questions, or are interested in working on this then drop me an email, or stop by my office hours.
 
 
 ## Where to go from here?
