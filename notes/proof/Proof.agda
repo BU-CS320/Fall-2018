@@ -94,7 +94,7 @@ data Bool : Set where
   True : Bool
   False : Bool
 
-
+-- insertion sort
 
 -- check is greater than 0
 isGTE : Nat -> Nat -> Bool
@@ -103,11 +103,11 @@ isGTE zero (succ n) = False
 isGTE (succ m) (succ n) = isGTE m n
 
 
---insertion sort
+--insertion into ordered list
 
 insert : Nat -> List Nat -> List Nat
 insert n Nil = (Cons n Nil)
-insert n (Cons m ls) with isGTE n m
+insert n (Cons m ls) with isGTE n m  -- look here!
 insert n (Cons m ls) | True  = (Cons m (insert n  ls))
 insert n (Cons m ls) | False  = (Cons n  (Cons m ls))
 
