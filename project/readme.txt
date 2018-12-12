@@ -29,15 +29,15 @@ names of all team members specified. All will receive equal credit for the work.
   10%  Parser (CParser.hs) -- This will take a String representing a Mini-C program and produce an
           AST expression for the program.  You must also implement a prettyShow function in Ast.hs whos output must always parse.
 
-  10%  Interpreter (ASTInterpreter.hs) -- This will take an AST expression output by the parser, evaluate it,
+  40%  Interpreter (ASTInterpreter.hs) -- This will take an AST expression output by the parser, evaluate it,
           and return a list of Strings (produced by print statements in the program).
 
 
-  60%  Compiler (CCompiler.hs)  -- This will take an AST expression and convert it into an Intermediate Code
+  45%  Compiler (CCompiler.hs)  -- This will take an AST expression and convert it into an Intermediate Code
           program (a list of IC statements). This IC program can then be executed by the IC interpreter provided
 	  to generate output from the print statements in the program. 
 
-  20%  Additional features (FeaturesTests.hs))  -- For the final 20% of the grade, you must implement at
+  5%  Additional features (FeaturesTests.hs))  -- For the final 20% of the grade, you must implement at
           least two refinements to the project. Some possibilities for this are as follows, but you may
 	  consult with us about your own ideas. Each of these is worth 10%, so you can do any two (no
 	  extra credit if you do more, though we'll be impressed and I'll be sure to mention it if
