@@ -516,7 +516,7 @@ The result of running this example in the ICInterpreter would be a list containi
 the result of the print statement in line 19, showing that GCD(2868,264) is 12:
 
   ICInterpreter> execute icTest11
-  Just ["res = 12"]
+  Just ["res = 2"]
   
   ICInterpreter>
 
