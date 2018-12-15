@@ -262,4 +262,48 @@ test12 = concat [
 
 ------------------------------------------------------------------
 
+--Test 13: Verifies that lazy evaluation is being done
+-- Should print out ["n= 1","k= 3","n= 10"]
+test13 = concat [
+   "def f(n) {                    ",
+   "     print n; ",
+   "     return n; ",
+   "}                    ",
+   "def main() {                    ",
+   "    k = 1;                    ",
+   "    if(f(k)<2 ||  f(k+1) > 10) {                    ",
+   "        k = k + 2; ",
+   "        print k;      ",
+   "    }                    ",
+   "    k = 10; ",
+   "    if(f(k)<2 &&  f(k+1) > 0) {                    ",
+   "        k = k + 2; ",
+   "        print k;   ",
+   "    }                    ",
+   "    return 0;                     ",
+   "}                    "]
 
+------------------------------------------------------------------
+
+--Test 14: Verifies that continue and break work
+-- Should print out ["k= 4","k= 5","k= 6"]
+
+test14 = concat [
+   "def main() {                  ",
+   "    k = 0;                    ",
+   "    while( 2 > 1 ) {          ",
+   "        k = k + 1;            ",
+   "        if(k < 4) {           ",
+   "           continue;          ",
+   "        }                     ",
+   "        else {                ",
+   "           if( k > 6) {       ",
+   "              break;          ",
+   "           }                  ",
+   "        }                     ",
+   "        print k;              ",
+   "    }                         ",
+   "    return 0;                 ",
+   "}                             "  ]
+
+------------------------------------------------------------------
