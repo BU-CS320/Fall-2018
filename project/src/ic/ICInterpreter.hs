@@ -141,7 +141,7 @@ print s = StatefulUnsafe $ \ (e,pr) ->  (Ok (), (e, pr ++ [s] ) )
 -- implicitly updates the state, returns the next command and debug info
 executeStep :: IC_Instruction -> Int -> StatefulUnsafe State (Int,String)
 executeStep  (Print' n src1) i =  do u <- getVal src1
-                                     print $ n ++ show u
+                                     print $ n ++ " = " ++ show u
                                      return (i+1, "ran print command")
 executeStep  (Jump' jump) i = return (jump, "jumped to "++ show jump)
 executeStep (Bzero' s jump) i = do  num <- getVal s
