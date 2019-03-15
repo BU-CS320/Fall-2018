@@ -7,6 +7,7 @@ If you have questions, or are interested in working on this then drop me an emai
 
 
 ## Where to go from here?
+see also https://mazzo.li/posts/AgdaSort.html
 
 ### Agda
  * a very minimal presentation of these concepts
