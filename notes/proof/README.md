@@ -12,6 +12,7 @@ see also https://mazzo.li/posts/AgdaSort.html
 ### Agda
  * a very minimal presentation of these concepts
  * http://people.inf.elte.hu/divip/AgdaTutorial/Index.html
+ * https://plfa.github.io/
  * plenty of videos
 
 
