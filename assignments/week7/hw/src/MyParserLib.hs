@@ -99,7 +99,7 @@ floatParser = mapParser (intParser +++ (literal ".") +++ (intParserHelper 0)) (\
 
 -- see https://hackage.haskell.org/package/base-4.11.1.0/docs/Data-Either.html
 
---try to parse a, if that doesn't work try to pars b
+--try to parse a, if that doesn't work try to parse b
 (<|>) :: Parser a -> Parser b -> Parser (Either a b)
 (pa <|> pb) str = case (pa str) of
                     Just (a, rest) -> Just (Left a, rest)
